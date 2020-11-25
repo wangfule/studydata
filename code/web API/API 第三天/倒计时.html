@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            width: 450px;
+            margin: 100px auto;
+        }
+
+        li {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #333;
+            color: #fff;
+            line-height: 100px;
+            font-size: 45px;
+            text-align: center;
+        }
+
+        i {
+            position: absolute;
+            bottom: 30px;
+            right: 7px;
+            color: #fff;
+            font-size: 12px;
+            font-style: normal;
+            line-height: 12px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li><span></span><i>天</i></li>
+        <li><span></span><i>时</i></li>
+        <li><span></span><i>分</i></li>
+        <li><span></span><i>秒</i></li>
+    </ul>
+
+    <script>
+        djs();
+        var s = setInterval(djs, 1000)
+
+        function djs() {
+            var spans = document.querySelectorAll('span')
+            console.log(spans);
+            var now = new Date();
+            var future = new Date('2020-11-11 00:00:00');
+
+            var timer = Math.floor((future - now) / 1000)
+            console.log(timer);
+
+            if (timer == 0) {
+                console.log(123);
+                clearInterval(s)
+                // alert("时间到了!!!")
+            }
+
+
+            var day = Math.floor(timer / 60 / 60 / 24)
+            var day = day < 10 ? '0' + day : day
+            console.log(day);
+            spans[0].innerHTML = day
+
+
+            var hour = Math.floor(timer / 60 / 60 % 24)
+            var hour = hour < 10 ? '0' + hour : hour
+            console.log(hour);
+            spans[1].innerHTML = hour
+
+            var minute = Math.floor(timer / 60 % 60)
+            var minute = minute < 10 ? '0' + minute : minute
+            console.log(minute);
+            spans[2].innerHTML = minute
+
+            var seconds = Math.floor(timer % 60)
+            var seconds = seconds < 10 ? '0' + seconds : seconds
+            console.log(seconds);
+            spans[3].innerHTML = seconds
+        }
+    </script>
+
+</body>
+
+</html>

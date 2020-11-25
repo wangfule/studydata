@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/template-web.js"></script>
+
+</head>
+
+<body>
+
+    <div id="con"></div>
+
+    <!-- 定义一个模板 <script type="text/html" id="tpl"> -->
+    <script type="text/html" id="tpl">
+        <div>姓名:{{uname}}</div>
+        <div>{{age}}</div>
+        <div>{{skill}}</div>
+    </script>
+
+    <!-- 定义数据 -->
+
+    <script>
+
+        const user = {
+            uname: '马保国',
+            age: 69,
+            skill: '闪电五连鞭'
+        }
+
+
+        // 调用 template('id', 数据) 这里的id要和模板的id一致 而且要加''号'
+        const str = template('tpl', user)
+        $('#con').append(str)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+.chanpin .link {
+    margin-top: 24px;
+    margin-bottom: 10px;
+    color: #7f7e7f;
+}
+
+.chanpin .link a {
+    color: #7f7e7f;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.chanpin .link span {
+    font-size: 12px;
+}
+
+.chanpin .content .left {
+    width: 400px;
+    float: left;
+}
+
+.chanpin .content .left .image_big {
+    width: 398px;
+    height: 398px;
+    border: 1px solid #cccccc;
+}
+
+.chanpin .content .left .image_big img {
+    width: 100%;
+    height: 100%;
+}
+
+.chanpin .content .left .image_small {
+    /* background-color: pink; */
+    height: 58px;
+    margin-top: 60px;
+}
+
+.chanpin .content .left .image_small span {
+    font-family: "icomoon";
+    font-size: 32px;
+    color: #ccc;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.chanpin .content .left .image_small span:first-child {
+    float: left;
+}
+
+.chanpin .content .left .image_small span:last-child {
+    float: right;
+}
+
+.chanpin .content .left .image_small img {
+    width: 54px;
+    height: 54px;
+    float: left;
+    margin: 0 4px;
+}
+
+.chanpin .content .left .image_small img:nth-child(3) {
+    border: 2px solid #de0000;
+}
+
+.chanpin .content .right {
+    float: right;
+    width: 720px;
+}
+
+.chanpin .content .right>h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #666666;
+    line-height: 28px;
+}
+
+.chanpin .content .right>p {
+    font-size: 12px;
+    color: red;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+
+.chanpin .content .right .text {
+    height: 138px;
+    background-color: #ffe8ea;
+
+}
+
+.chanpin .content .right .text .jiage p {
+    float: left;
+    height: 20px;
+    margin-top: 18px;
+}
+
+.chanpin .content .right .text .jiage p:nth-child(1) {
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+.chanpin .content .right .text .jiage p:nth-child(2) {
+    font-size: 20px;
+    color: #fa0000;
+    font-weight: 700;
+    margin-left: 42px;
+}
+
+.chanpin .content .right .text .jiage p:nth-child(3) {
+    font-size: 12px;
+    height: 12px;
+    margin-top: 26px;
+    margin-left: 8px;
+    color: #de0000;
+}
+
+.chanpin .content .right .text .jiage p:nth-child(4) {
+    float: right;
+    font-size: 12px;
+    line-height: 20px;
+    margin-right: 10px;
+    color: #666666;
+}
+
+.chanpin .content .right .text .xiangqing p {
+    float: left;
+    line-height: 36px;
+    margin-top: 20px;
+}
+
+.chanpin .content .right .text .xiangqing p:first-child {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.chanpin .content .right .text .xiangqing p:last-child {
+    width: 446px;
+    margin-left: 42px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.chanpin .content .right .text .xiangqing p span {
+    display: inline-block;
+    background-color: #de0000;
+    color: #fff;
+    font-size: 12px;
+    height: 22px;
+    width: 40px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.chanpin .content .right .zhichi {
+    height: 36px;
+    line-height: 36px;
+
+}
+
+.chanpin .content .right dt {
+    float: left;
+    width: 60px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.chanpin .content .right .zhichi dd {
+    float: left;
+    font-size: 12px;
+    color: #666;
+}
+
+.chanpin .content .right .phone_color {
+    height: 43px;
+    line-height: 43px;
+}
+
+.chanpin .content .right .phone_color dd {
+    float: left;
+    height: 41px;
+    width: 80px;
+    line-height: 41px;
+    border: 1px solid #ededed;
+    background-color: #f7f7f7;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 4px;
+}
+
+.chanpin .content .right .banben,
+.chanpin .content .right .buy_way {
+    height: 32px;
+    margin-top: 10px;
+    line-height: 32px;
+}
+
+.chanpin .content .right .banben dd,
+.chanpin .content .right .buy_way dd {
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    padding: 0px 12px;
+    border: 1px solid #ededed;
+    background-color: #f7f7f7;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 4px;
+}
+
+.chanpin .content .right .phone_color dd:hover {
+    border-color: #de0000;
+}
+
+.chanpin .content .right .buy_num {
+    height: 46px;
+    margin-top: 22px;
+}
+
+.chanpin .content .right .buy_num>div {
+    position: relative;
+    float: left;
+    height: 44px;
+    width: 48px;
+    border: 1px solid #ccc;
+}
+
+.chanpin .content .right .buy_num>div input {
+    height: 44px;
+    width: 32px;
+    outline-style: none;
+    text-align: center;
+}
+
+.chanpin .content .right .buy_num>div a:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    width: 15px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.chanpin .content .right .buy_num>div a:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 22px;
+    width: 15px;
+    line-height: 22px;
+    text-align: center;
+    border-left: 1px solid #ccc;
+    cursor: not-allowed;
+
+}
+
+.chanpin .content .right .buy_num>div a:nth-child(2):hover {
+    color: red;
+}
+
+.chanpin .content .right .buy_num>a {
+    float: left;
+    width: 142px;
+    height: 46px;
+    line-height: 46px;
+    background-color: #de0000;
+    color: #ffF;
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.chanpin .content .right .buy_num>a:hover {
+    color: gold;
+}

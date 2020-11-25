@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    width: 100%;
+    max-width: 640px;
+    min-width: 340px;
+    margin: 0 auto;
+}
+
+input,
+img {
+    vertical-align: middle;
+    border: none;
+    outline-style: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+header {
+    position: fixed;
+    max-width: 640px;
+    min-width: 340px;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    padding-top: 7px;
+}
+
+.search {
+    position: relative;
+    margin: 0 80px;
+    height: 30px;
+    border-radius: 22px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+
+.search input {
+    float: left;
+    width: 100%;
+    height: 100%;
+    padding-left: 5px;
+    margin-left: 30px;
+
+}
+
+.search em {
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    width: 25px;
+    height: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.search em img {
+    width: 20px;
+    margin-top: 2px;
+    display: block;
+    margin-right: 5px;
+}
+
+
+.menu {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    /* margin-top: 5px; */
+}
+
+.menu img {
+    width: 100%;
+}
+
+.login {
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+.login a {
+    color: #fff;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.jiadian a {
+    float: left;
+    width: 33.33%;
+}
+
+.jiadian img {
+    width: 100%;
+}
+
+.nav {
+    margin: 10px 0;
+}
+
+.nav li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.nav li a {
+    display: block;
+}
+
+.nav img {
+    width: 40px;
+}
+
+.nav p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.choujiang a {
+    float: left;
+}
+
+.choujiang a img {
+    width: 100%;
+}
+
+.choujiang a:first-child {
+    width: 50%;
+}
+
+.choujiang a:nth-child(2),
+.choujiang a:nth-child(3) {
+    width: 25%;
+    border-left: 1px solid #ccc;
+}

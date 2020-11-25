@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text">
+    <button>发送</button>
+
+
+    <script>
+        var btn = document.querySelector('button')
+        var a = 3
+        btn.addEventListener('click', function () {
+            btn.disabled = true;
+            btn.innerHTML = "倒计时" + a + '秒'
+
+            var s = setInterval(function () {
+                a--
+
+                btn.innerHTML = "倒计时" + a + '秒'
+                console.log(a);
+                if (a == 0) {
+                    clearInterval(s)
+                    btn.disabled = false;
+                    btn.innerHTML = '发送'
+                    a = 3
+                }
+            }, 2000)
+            console.log("s是" + s);
+
+        })
+    </script>
+
+</body>
+
+</html>

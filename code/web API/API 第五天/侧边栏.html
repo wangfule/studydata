@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .box div {
+            margin-bottom: 10px;
+        }
+
+        .d1 {
+            position: relative;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .d2 {
+            height: 300px;
+            background-color: green;
+        }
+
+        .d3 {
+            height: 400px;
+            background-color: blue;
+        }
+
+        .d4 {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            background-color: yellow;
+        }
+
+        .d4 .one {
+            position: absolute;
+            top: 50px;
+
+            left: -480px;
+            height: 200px;
+            width: 40%;
+            background-color: green;
+        }
+
+        .d4 .two {
+            position: absolute;
+            top: 50px;
+            /* left: 480px; */
+            left: 960px;
+            height: 200px;
+            width: 40%;
+            background-color: pink;
+        }
+
+        .d5 {
+            height: 300px;
+            background-color: orange
+        }
+
+        .sidebar {
+            position: absolute;
+            top: 400px;
+            left: 50%;
+            margin-left: 490px;
+            /* height: 150px; */
+            width: 60px;
+            background-color: orchid;
+        }
+
+        .sidebar .daohang {
+            height: 200px;
+        }
+
+        .sidebar .t_top {
+            display: none;
+            cursor: pointer;
+            height: 60px;
+            background-color: red;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        .cs {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="d1">
+            <div class="cs"></div>
+        </div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">
+            <div class="one"></div>
+            <div class="two"></div>
+        </div>
+        <div class="d5">5</div>
+    </div>
+    <div class="sidebar">
+        <div class="daohang"></div>
+        <div class="t_top">顶部</div>
+    </div>
+
+
+    <script>
+        var d2 = document.querySelector('.d2')
+        var d3 = document.querySelector('.d3')
+        var d4 = document.querySelector('.d4')
+        var sidebar = document.querySelector('.sidebar')
+        var t_top = document.querySelector('.t_top')
+        var one = document.querySelector('.one')
+        var two = document.querySelector('.two')
+        var cs = document.querySelector('.cs')
+
+        var top1 = d2.offsetTop;
+        var top2 = sidebar.offsetTop - top1;
+        var top3 = d3.offsetTop;
+        console.log(one);
+
+        console.log(cs);
+        // animateX(cs, 600)
+        document.onscroll = function () {
+            // console.log(sidebar.offsetTop - top1);
+            if (window.pageYOffset >= top1) {
+                sidebar.style.position = 'fixed'
+                // console.log();
+                sidebar.style.top = top2 + 'px'
+            } else {
+                sidebar.style.position = 'absolute'
+                // console.log();
+                sidebar.style.top = ""
+            }
+
+            if (window.pageYOffset >= top3) {
+                t_top.style.display = 'block'
+                animateX(one, 100)
+                animateX(two, 480)
+            } else {
+                t_top.style.display = 'none'
+                t_top.onclick = function () {
+                    animate(window, 0)
+                }
+                animateX(one, -480)
+                animateX(two, 960)
+
+            }
+
+            // if (window.pageYOffset >= d4.offsetTop) {
+            //     animateX(one, 100)
+            //     animateX(two, 480)
+            // } else {
+            //     animateX(one, -480)
+            //     animateX(two, 960)
+            // }
+        }
+
+
+
+
+
+
+        var animate = function (obj, target) {
+
+            obj.timer = setInterval(function () {
+
+                var step = (target - window.pageYOffset) / 10
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (window.pageYOffset == target) {
+                    clearInterval(obj.timer)
+                }
+                obj.scroll(0, window.pageYOffset + step)
+            }, 15)
+
+        }
+
+
+
+        function animateX(obj, target) {
+            clearInterval(obj.timer)
+            obj.timer = setInterval(function () {
+
+                var step = (target - obj.offsetLeft) / 10
+                step = step > 0 ? Math.ceil(step) : Math.floor(step)
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer)
+                }
+                console.log(obj.className + obj.offsetLeft);
+                obj.style.left = obj.offsetLeft + step + 'px'
+
+            }, 15)
+        }
+    </script>
+
+</body>
+
+</html>

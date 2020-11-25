@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big_box {
+            height: 400px;
+            width: 1200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .big_box div {
+            position: absolute;
+            transform: translateX(-800px);
+            bottom: 0;
+        }
+
+        .big_box div:nth-child(1) {
+            /* left: 0px; */
+            height: 157px;
+            width: 171px;
+            background: url(images/txgq_d281c9b.png);
+            animation: run2 .5s steps(2) infinite, move 5s infinite linear;
+        }
+
+        .big_box div:nth-child(2) {
+            /* left: 200px; */
+            width: 161px;
+            height: 149px;
+            background: url(images/txgl_c15cfd8.png);
+            animation: run3 .5s steps(2) infinite, move 5s 1s infinite linear;
+        }
+
+        .big_box div:nth-child(3) {
+            /* left: 400px; */
+            width: 167px;
+            height: 176px;
+            background: url(images/txgh_fee2457.png);
+            animation: run4 .5s steps(2) infinite, move 5s 2s infinite linear;
+        }
+
+
+        .big_box div:nth-child(4) {
+            /* left: 600px; */
+            height: 121px;
+            width: 154px;
+            background: url(images/txgc_6d0e9e5.png);
+            animation: run1 .5s steps(2) infinite, move 5s 3s infinite linear;
+        }
+
+        @keyframes run1 {
+            0% {}
+
+            50% {
+                background-position: -308px 0;
+            }
+
+            /* 100% {
+                background-position: 0 0;
+            } */
+        }
+
+        @keyframes run2 {
+            0% {}
+
+            100% {
+                background-position: -342px 0;
+            }
+        }
+
+        @keyframes run3 {
+            0% {}
+
+            100% {
+                background-position: -322px 0;
+            }
+        }
+
+        @keyframes run4 {
+            0% {}
+
+            100% {
+                background-position: -334px 0;
+            }
+        }
+
+        @keyframes move {
+            0% {}
+
+            100% {
+                transform: translateX(1000px);
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big_box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

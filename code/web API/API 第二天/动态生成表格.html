@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 1px solid #333;
+        }
+
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+
+        tr td:last-child {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        var datas = [{
+            name: '魏璎珞',
+            subject: 'JavaScript',
+            score: 100
+        }, {
+            name: '弘历',
+            subject: 'JavaScript',
+            score: 98
+        }, {
+            name: '傅恒',
+            subject: 'JavaScript',
+            score: 99
+        }, {
+            name: '明玉',
+            subject: 'JavaScript',
+            score: 88
+        }, {
+            name: '大猪蹄子',
+            subject: 'JavaScript',
+            score: 0
+        }];
+
+        // 获取到tbody标签
+        var tbody = document.querySelector('tbody');
+        // console.log(tbody);
+
+        // 循环遍历datas数组
+        for (var i = 0; i < datas.length; i++) {
+            // console.log(datas[i]);
+
+            // 创建一个tr标签
+            var trs = document.createElement('tr')
+            // 将每个tr标签加到tbody里面
+            tbody.appendChild(trs)
+            // console.log(trs);
+            // 定义一个对象，等于当前数组里面的对象
+            // var obj = datas[i]
+            // 遍历对象
+            for (k in datas[i]) {
+                // console.log(obj[k]);
+                // 每次遍历对象属性都添加一个td
+                var tds = document.createElement('td')
+                // 把遍历出来的属性值赋值给每个td
+                tds.innerHTML = datas[i][k]
+                // 把td添加到每个tr里面
+                trs.appendChild(tds)
+            }
+            // 在每一个tr最后痘再加一个td,用来存放删除
+            var tds = document.createElement('td')
+            tds.innerHTML = "删除"
+            trs.appendChild(tds)
+            // console.log(trs);
+            tds.onclick = function () {
+                this.parentNode.parentNode.removeChild(this.parentNode);
+            }
+        }
+        // console.log(tbody);
+        // // 获取到每个tr
+        // var del = tbody.querySelectorAll('tr');
+        // console.log(del);
+
+        // for (var i = 0; i < del.length; i++) {
+        //     // 获取到每一个tr里面的最后一个td
+        //     // console.log(del[i].children[del[i].children.length - 1]);
+
+        //     del[i].children[del[i].children.length - 1].onclick = function () {
+        //         console.log(this.parentNode);
+        //         this.parentNode.parentNode.removeChild(this.parentNode);
+        //     }
+        // }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function px(a) {
+            for (var i = 0; i < a.length - 1; i++) {
+                for (var j = 0; j < a.length - i - 1; j++) {
+                    if (a[j] > a[j + 1]) {
+                        var s = a[j];
+                        a[j] = a[j + 1];
+                        a[j + 1] = s;
+                    }
+
+                }
+            }
+            console.log(a);
+        }
+
+        var arr = [2, 4, 1, 9, 6, 3]
+        px(arr);
+
+        px([34, 23, 56, 12, 35, 90])
+    </script>
+
+</body>
+
+</html>

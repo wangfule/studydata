@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        var arr = [2, 1, 4, 3, 5]
+
+        // 颠倒数组
+        console.log(arr.reverse());
+
+        // 数组排序
+        console.log(arr.sort(function (a, b) {
+            // return a - b;  正序
+            return b - a //倒叙
+        }))
+
+        // 前增加数组
+        arr.unshift(12)
+        console.log(arr);
+
+        // 后增加数组
+        arr.push(24)
+        console.log(arr);
+
+        // 前减
+        arr.shift();
+        console.log(arr);
+
+        //后减
+
+        arr.pop()
+        console.log(arr);
+
+
+        // 检测是不是数组
+        console.log(arr instanceof Array);
+        console.log(Array.isArray(arr));
+
+        // 数组拼接
+
+        var a = [1, 2, 3, 4]
+        var b = [5, 6, 7]
+
+        var c = a.concat(b);
+        console.log(c);
+        console.log(a);
+        console.log(b);
+    </script>
+
+
+</body>
+
+</html>

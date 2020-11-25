@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"><span>请输入!!!</span>
+
+
+    <script>
+
+        var reg = /^[a-zA-Z]\w{5,17}$/
+
+        var inp = document.querySelector('input');
+        var span = document.querySelector('span');
+        inp.onblur = function () {
+            if (reg.test(inp.value)) {
+                span.style.color = 'green';
+                span.innerHTML = '格式正确喽'
+            } else {
+                span.style.color = 'red';
+                span.innerHTML = '格式错误啦'
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

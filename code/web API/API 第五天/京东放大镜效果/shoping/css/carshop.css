@@ -1,0 +1,286 @@
+.header .search {
+    left: 662px;
+}
+
+/* 购物车 */
+
+.header .carshop {
+    position: absolute;
+    top: 36px;
+    left: 200px;
+    width: 60px;
+    height: 20px;
+}
+
+.header .carshop p {
+    font-size: 20px;
+    color: #333333;
+}
+
+/* 中心内容区域 */
+
+/* 标题，全部商品分类 */
+.carshop_title {
+    height: 18px;
+    line-height: 18px;
+    color: #c81623;
+}
+
+.carshop_title h3 {
+    float: left;
+    font-size: 16px;
+}
+
+.carshop_title p {
+    float: left;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* 头部小标题 */
+
+.carshop_head {
+    margin-top: 23px;
+    padding-left: 4px;
+    height: 34px;
+    background-color: #f5f5f5;
+    border: 1px solid #dddddd;
+    line-height: 34px;
+}
+
+.carshop_head .checkbox {
+    float: left;
+}
+
+.carshop_head .checkbox input {
+    margin-right: 10px;
+}
+
+.carshop_head .goods {
+    float: left;
+    margin-left: 205px;
+}
+
+.carshop_head .price {
+    float: left;
+    margin-left: 333px;
+}
+
+.carshop_head .num,
+.carshop_head .sum,
+.carshop_head .action {
+    float: left;
+    margin-left: 110px;
+}
+
+/* <!-- 详细产品列表 --> */
+
+.bg_pink {
+    background-color: #fdeeee;
+}
+
+.carshop_list {
+    margin-top: 16px;
+}
+
+.carshop_list .list_hd {
+    height: 28px;
+    padding-left: 4px;
+    line-height: 28px;
+    border-bottom: 2px solid #dcdcdc;
+}
+
+.carshop_list .list_hd .checkbox input {
+    margin-right: 10px;
+}
+
+.carshop_list .list_hd .checkbox span {
+    padding: 2px 5px;
+
+    background-color: #ca162e;
+    color: #fff;
+}
+
+.carshop_list .list_bd ul {
+    margin-top: 20px;
+}
+
+.carshop_list .list_bd li {
+    border: 1px solid #dcdcdc;
+    padding: 12px 4px;
+
+}
+
+.carshop_list .list_bd li:nth-child(n+2) {
+    margin-top: -1px;
+}
+
+.carshop_list .list_bd .checkbox {
+    float: left;
+    margin-right: 16px;
+}
+
+.carshop_list .list_bd .image {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #dcdcdc;
+}
+
+.carshop_list .list_bd .image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.carshop_list .list_bd .pro_name {
+    float: left;
+    margin-left: 10px;
+}
+
+.carshop_list .list_bd .pro_name i {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background: url(../images/icons.png) no-repeat -525px -78px;
+    vertical-align: top;
+}
+
+.carshop_list .list_bd .pro_type {
+    float: left;
+    margin-left: 38px;
+}
+
+.carshop_list .list_bd .pro_type p {
+    width: 156px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carshop_list .list_bd .price {
+    float: left;
+    margin-left: 90px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.carshop_list .list_bd .num {
+    float: left;
+    margin-left: 80px;
+
+}
+
+.carshop_list .list_bd .num a {
+    float: left;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #dcdcdc;
+    text-align: center;
+    line-height: 28px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.carshop_list .list_bd .num a:last-child {
+    margin-left: -1px;
+}
+
+.carshop_list .list_bd .num input {
+    float: left;
+    height: 28px;
+    width: 39px;
+    border: 1px solid #dcdcdc;
+    margin-left: -1px;
+    text-align: center;
+    line-height: 28px;
+}
+
+.carshop_list .list_bd .sum {
+    float: left;
+    margin-left: 60px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.carshop_list .list_bd .action {
+    float: left;
+    margin-left: 120px;
+}
+
+.carshop_foot {
+    height: 50px;
+    border: 1px solid #dcdcdc;
+    margin-top: 20px;
+    padding-left: 4px;
+}
+
+.carshop_foot .left {
+    float: left;
+    line-height: 50px;
+}
+
+.carshop_foot .checkbox {
+    float: left;
+}
+
+.carshop_foot .checkbox input {
+    margin-right: 10px;
+}
+
+.carshop_foot .action {
+    float: left;
+}
+
+.carshop_foot .action a {
+    margin-right: 12px;
+}
+
+.carshop_foot .right {
+    float: right;
+}
+
+.carshop_foot .check_num {
+    float: left;
+    margin-top: 7px;
+    margin-right: 14px;
+}
+
+.carshop_foot .check_num em {
+    color: #ea0018;
+}
+
+.carshop_foot .price {
+    float: left;
+    margin-right: 30px;
+}
+
+.carshop_foot .price .price_num {
+    color: #ea0018;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.carshop_foot .price .txt {
+    display: inline-block;
+    text-align: right;
+    width: 90px;
+}
+
+.carshop_foot .price p:first-child {
+    margin-top: 5px
+}
+
+
+.carshop_foot .btn {
+    float: left;
+    width: 110px;
+    background-color: #e60111;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.carshop_foot .btn a {
+    color: #fff;
+}

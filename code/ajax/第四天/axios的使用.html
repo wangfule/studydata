@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/axios.js"></script>
+</head>
+
+<body>
+
+    <button id="btn1">btn1</button>
+    <button id="btn2">btn2</button>
+
+    <script>
+
+        let btn1 = document.querySelector("#btn1");
+        let btn2 = document.querySelector("#btn2");
+        btn1.addEventListener('click', function () {
+            axios({
+                method: "GET",
+                url: "http://www.escook.cn:3006/api/get",
+                params: {
+
+                }
+            }).then(function (res) {
+                console.log(res.data);
+            })
+        })
+
+        btn2.addEventListener('click', function () {
+
+            axios({
+                method: "POST",
+                url: "http://www.escook.cn:3006/api/post",
+                data: {
+                    name: '娃哈哈',
+                    age: 18,
+                    gender: '女'
+                }
+            }).then(function (res) {
+                console.log(res.data);
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

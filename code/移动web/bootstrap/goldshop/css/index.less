@@ -1,0 +1,153 @@
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+header {
+    // border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    .row {
+        text-align: center;
+
+        div {
+            height: 40px;
+            line-height: 40px;
+        }
+
+        div:nth-child(2) {
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+
+        div:nth-child(3) {
+            // border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+
+        div:nth-child(4) {
+            a:first-child {
+                display: inline-block;
+                // line-height: 0px;
+                line-height: 30px;
+                height: 30px;
+                padding: 0 10px;
+                background-color: red;
+                border-radius: 5px;
+                color: #fff;
+            }
+        }
+
+        div:nth-child(1)::before {
+            content: "\e958";
+            font-family: "icomoon";
+        }
+
+        div:nth-child(1)::after {
+            content: "\e91e";
+            font-family: "icomoon";
+        }
+
+        div:nth-child(2)::before {
+            content: "\e942";
+            font-family: "icomoon";
+        }
+
+
+    }
+
+}
+
+.nav {
+    height: 100px;
+    border-bottom: 1px solid #ccc;
+
+    .logo {
+        margin-top: 32px;
+
+        h1 {
+            a {
+                display: block;
+                width: 150px;
+                height: 36px;
+                background: url(../images/logo.png) no-repeat center;
+                background-size: 100%;
+            }
+        }
+    }
+
+    .nav_main {
+
+        li {
+            height: 98px;
+            padding: 0 10px;
+            line-height: 98px;
+            float: left;
+
+            &:hover {
+                border-bottom: 2px solid red;
+            }
+        }
+    }
+
+    .myself {
+        a {
+            float: right;
+            width: 80px;
+            display: block;
+            height: 98px;
+            line-height: 100px;
+            text-align: center;
+
+            &:hover {
+                border-bottom: 2px solid red;
+            }
+        }
+
+    }
+
+    .menu {
+        span {
+            line-height: 100px;
+
+
+            &::after {
+                content: "\e9bd";
+                font-family: "icomoon";
+                font-size: 30px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.info {
+    ul {
+        li {
+            a {
+                &:hover {
+                    color: red;
+                }
+
+                .left {
+                    float: left;
+                    margin-top: 14px;
+                    margin-right: 10px;
+                    width: 40px;
+                    height: 40px;
+                    background-color: red;
+                }
+
+                .right {
+                    float: left;
+
+
+                }
+            }
+
+        }
+    }
+}

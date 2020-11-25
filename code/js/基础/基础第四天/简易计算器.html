@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- 
+
+        - 用户在弹出的输入框中选择要做的运算
+        - 用户选择后弹出两个输入框，让用户输入数据
+        - 根据用户选择的操作和输入的数据，计算出最后结果并弹出提示框显示结果
+
+     -->
+
+
+    <script>
+        while (true) {
+            var action = prompt("欢迎使用简易计算器\n 1、加法 \n 2、减法 \n 3、乘法 \n 4、除法 \n 5、退出 \n请输入你要选择的操作")
+
+            if (action == 1) {
+                add();
+
+            } else if (action == 2) {
+                sub()
+
+            } else if (action == 3) {
+                ride()
+
+            } else if (action == 4) {
+                chu()
+
+            } else if (action == 5) {
+                alert("再见喽...")
+                break;
+
+            } else {
+                alert("请正确操作！！！！")
+            }
+
+        }
+
+
+
+
+
+
+
+        function add() {
+            var num1 = prompt("请输入第一个数：") - 0;
+            var num2 = prompt("要加的第二个数：") - 0;
+            alert(num1 + "+" + num2 + "=" + (num1 + num2))
+        }
+
+        function sub() {
+            var num1 = prompt("请输入第一个数：");
+            var num2 = prompt("要减去的那个数：");
+            alert(num1 + "-" + num2 + "=" + (num1 - num2))
+        }
+
+        function ride() {
+            var num1 = prompt("请输入第一个数：");
+            var num2 = prompt("要乘上的那个数：");
+            alert(num1 + "×" + num2 + "=" + (num1 * num2))
+        }
+
+        function chu() {
+            var num1 = prompt("请输入被除数：");
+            var num2 = prompt("请输入除数：");
+            if (num2 == 0) {
+                alert("除数不能为0")
+            } else {
+                alert(num1 + "÷" + num2 + "=" + (num1 / num2))
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

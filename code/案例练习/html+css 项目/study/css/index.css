@@ -1,0 +1,406 @@
+body {
+    background-color: #f3f6f8;
+}
+
+.top_logo {
+    height: 100px;
+    /* background-color: pink; */
+}
+
+.logo {
+    float: left;
+    margin-top: 30px;
+}
+
+.list {
+    float: left;
+    margin-left: 70px;
+    margin-top: 43px;
+}
+
+.list li {
+    float: left;
+}
+
+.list li a {
+    display: block;
+    height: 28px;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.list li a:hover {
+    border-bottom: 2px solid #02a6ff;
+}
+
+.searchBox {
+    float: left;
+    margin-left: 85px;
+    margin-top: 30px;
+    border: 1px solid #02a6ff;
+}
+
+.searchBox .search_txt {
+    float: left;
+    width: 350px;
+    height: 38px;
+    padding-left: 10px;
+    /* 清除聚焦后输入框的边框 */
+    outline-style: none;
+}
+
+.searchBox .search_btn {
+    float: left;
+    width: 49px;
+    height: 38px;
+    background: url(../images/search.png) no-repeat center center;
+    background-color: #02a6ff;
+    outline-style: none;
+}
+
+.userCenter {
+    float: left;
+    margin-top: 35px;
+    margin-left: 32px;
+    height: 33px;
+}
+
+.userCenter img {
+    display: block;
+    float: left;
+}
+
+.userCenter span {
+    display: block;
+    float: left;
+    height: 33px;
+    line-height: 33px;
+    margin-left: 8px;
+}
+
+.banner {
+    height: 420px;
+    background-color: #1b046b;
+}
+
+.banner .banner_center {
+    height: 420px;
+    background: url(../images/banner.png) no-repeat;
+}
+
+.banner .bannerList {
+    float: left;
+    height: 410px;
+    width: 190px;
+    background-color: rgba(0, 0, 0, .3);
+    padding-top: 10px;
+}
+
+
+.banner .bannerList a {
+    display: block;
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.banner .bannerList p {
+    float: left;
+    color: #fff;
+}
+
+.banner .bannerList span {
+    float: right;
+    color: #fff;
+    font-family: "宋体";
+}
+
+.banner .bannerList li:hover p,
+.banner .bannerList li:hover span {
+    color: #0590cc;
+}
+
+.banner .kechengbiao {
+    float: right;
+    width: 228px;
+    height: 300px;
+    background-color: #fff;
+    margin-top: 50px;
+}
+
+.kechengbiao h2 {
+    height: 48px;
+    width: 228px;
+    background-color: #9acfea;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.kechengbiao ul {
+    width: 194px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.kechengbiao ul li {
+    height: 45px;
+    padding-top: 14px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.kechengbiao .last_li {
+    border: none;
+}
+
+.kechengbiao .p2 {
+    font-size: 12px;
+    color: #c0c0c0;
+}
+
+.kechengbiao ul li:hover p {
+    color: #02a6ff;
+}
+
+.kechengbiao .kecheng_all {
+    width: 198px;
+    height: 38px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #02a6ff;
+    line-height: 38px;
+    text-align: center;
+}
+
+.main_body .nav {
+    background-color: #fff;
+    height: 60px;
+    padding: 0 34px;
+    margin-top: 8px;
+    box-shadow: 0 2px 5px #dfdfe2;
+    /* line-height: 60px; */
+}
+
+.main_body .nav h4 {
+    float: left;
+    margin-right: 34px;
+    line-height: 60px;
+    font-size: 18px;
+    color: #0aa1ff;
+}
+
+.main_body .nav ul {
+    float: left;
+}
+
+.main_body .nav ul li {
+    float: left;
+
+}
+
+.main_body .nav ul li a {
+    display: block;
+    width: 133px;
+    height: 20px;
+    border-left: 1px solid #c0c0c0;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.main_body .nav .link {
+    float: right;
+    line-height: 60px;
+    color: #02a6ff;
+}
+
+/* 精品推荐 */
+.main_body .tuijian {
+    margin-top: 37px;
+}
+
+.main_body .tuijian_top {
+    height: 42px;
+}
+
+/* **************************************** */
+/* 每个推荐上面的长栏 */
+h4.title {
+    float: left;
+    font-size: 20px;
+    color: #494c4c;
+}
+
+a.more {
+    display: block;
+    float: right;
+    font-size: 12px;
+    color: #afb2b2;
+    margin-right: 32px;
+    line-height: 26px;
+}
+
+/* ******************************************************************* */
+/* 小框布局样式，具体广告小框 */
+.item {
+    position: relative;
+    width: 228px;
+    height: 270px;
+    background-color: #fff;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.item:hover {
+    box-shadow: 0 2px 5px #999;
+}
+
+.item>img {
+    width: 228px;
+    margin-bottom: 25px;
+}
+
+.item em {
+    position: absolute;
+    top: 4px;
+    right: -4px;
+}
+
+.item h4 {
+    line-height: 20px;
+    padding: 0 24px;
+    font-size: 14px;
+    font-weight: 400;
+    height: 50px;
+}
+
+.item p {
+    padding: 0 24px;
+}
+
+/* 最后一个框给去掉右边距 */
+.item.last {
+    margin-right: 0;
+}
+
+/* ****************************************** */
+
+/* 每个框上面登记划分框样式   热门 初级 中级 高级 */
+.main_body .classify {
+    float: left;
+    margin-left: 315px;
+}
+
+.main_body .classify li {
+    float: left;
+    width: 105px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.main_body .classify li a {
+    display: block;
+}
+
+
+.main_body .classify li a:hover {
+    color: #02a6ff;
+}
+
+/* **************************************************** */
+
+/* 编程入门 */
+.main_body .rumen {
+    margin-top: 23px;
+}
+
+.main_body .rumen .rumen_top {
+    height: 42px;
+}
+
+
+.main_body .rumen_center .left {
+    width: 228px;
+    float: left;
+    margin-right: 15px;
+}
+
+.main_body .rumen_center .right_top {
+    float: right;
+    width: 957px;
+    margin-bottom: 15px;
+}
+
+/* ******************************************************** */
+/* 机器学习工程师 */
+.jiqi {
+    margin-top: 37px;
+}
+
+.main_body .jiqi_top {
+    height: 42px;
+}
+
+/* ******************************************************* */
+/* 网页底部 */
+.footer {
+    height: 416px;
+    margin-top: 25px;
+    background-color: #fff;
+}
+
+.footer .footer_center {
+    padding-top: 32px;
+}
+
+.footer .left {
+    float: left;
+}
+
+.footer .left img {
+    margin-bottom: 15px;
+}
+
+.footer .left p {
+    line-height: 20px;
+    color: #6e6e6e;
+}
+
+.footer .left a {
+    display: block;
+    width: 118px;
+    height: 34px;
+    border: 1px solid #02a6ff;
+    color: #02a6ff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 34px;
+    margin-top: 18px;
+}
+
+.footer .right {
+    float: right;
+}
+
+.footer .right dl {
+    float: left;
+    margin-left: 145px;
+}
+
+.footer .right dl dt {
+    font-size: 18px;
+    color: #3f3f3f;
+    margin-bottom: 15px;
+}
+
+.footer .right dl dd {
+    line-height: 22px;
+    font-size: 12px;
+}
+
+.footer .right dl dd:hover a {
+    color: #02a6ff;
+}

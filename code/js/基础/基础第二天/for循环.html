@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [13, 78, 1, 23, 46, 89, 24];
+
+        // 当i=0    13 1 23 46 78 24 89
+        // 当i = 1  1 13 23 46 24 78 
+        // 当i =2   1 13 23 24 46 
+        // 当i= 3   
+
+        // console.log(arr.length);
+
+        //arr.length  7
+        for (var i = 0; i < arr.length - 1; i++) {
+
+            //6
+            for (var j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var s = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = s;
+                }
+
+            }
+            // console.log(arr[i]);
+        }
+
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+    </script>
+</body>
+
+</html>

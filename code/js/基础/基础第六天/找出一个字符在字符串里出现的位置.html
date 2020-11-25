@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--
+        一个字符出现的次数
+     -->
+
+
+    <script>
+        var str = "asdsaasddasdaaddddsxvg"
+
+
+        // 最后一个出现s的位置
+        console.log(str.lastIndexOf('s'));
+
+        var num = str.indexOf('d');
+        var a = 0;
+        // console.log(num);
+        while (num !== -1) {
+            a++;
+            num = str.indexOf('d', num + 1)
+        }
+        console.log(a);
+    </script>
+
+</body>
+
+</html>

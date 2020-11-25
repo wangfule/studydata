@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logo div {
+            width: 272px;
+            height: 92px;
+            background-image: url(images/下载.svg);
+            display: inline-block;
+            margin-top: 150px;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .ss {
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .search {
+            display: inline-block;
+            width: 560px;
+            border-radius: 50px;
+            border: 2px solid #d2d2d6;
+            box-shadow: 1px 1px 5px #d2d2d6;
+        }
+
+        .search input {
+            font-size: 15px;
+            width: 450px;
+            height: 30px;
+            border: 0px;
+            outline: none;
+            padding-left: 10px;
+        }
+
+        .search button {
+            height: 42px;
+            width: 30px;
+            border: 0px;
+            background-color: white;
+            color: rgba(0, 0, 255, 0);
+            outline: none;
+        }
+
+        .s_logo {
+            background: url(images/search.svg) no-repeat center;
+        }
+
+        .yy {
+            background: url(images/下载\ \(1\).svg) no-repeat center;
+        }
+
+        .search button:hover {
+            cursor: pointer;
+        }
+
+        /* .search input:focus {
+            background-color: #ccc111;
+        } */
+        .friendlink {
+            text-align: center;
+        }
+
+        .friendlink a {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 40px 15px;
+            text-decoration: none;
+
+        }
+
+        .friendlink a:hover {
+            background-color: #f2f2f2;
+        }
+
+        .friendlink a .icon {
+            width: 48px;
+            height: 48px;
+            margin: 10px auto;
+            margin-bottom: 0px;
+            background-color: #e4e7e8;
+            border-radius: 50%;
+
+        }
+
+        .friendlink a .icon p {
+            margin-top: 10px;
+        }
+
+        .bd {
+            background: url(images/下载.png) no-repeat center;
+        }
+
+        .other {
+            background: url(images/add_link.svg) no-repeat center;
+        }
+
+
+        .friendlink a .txt {
+            height: 40px;
+            text-align: center;
+            line-height: 52px;
+            color: black;
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+        function cleartxt() {
+            document.getElementById('search_s').placeholder = " ";
+        }
+
+        function addtxt() {
+            document.getElementById('search_s').placeholder = "在谷歌上搜索，或者输入个网址";
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="logo">
+        <div> </div>
+    </div>
+    <label for="search_s">
+        <div class="ss">
+            <div class="search">
+                <button class="s_logo">a</button><input id="search_s" type="text" placeholder="在谷歌上搜索，或者输入个网址"
+                    onfocus="cleartxt(1)" onblur="addtxt()"><button class="yy">a</button>
+            </div>
+        </div>
+    </label>
+    <div class="friendlink">
+        <a href="#">
+            <div class="icon bd">
+            </div>
+            <div class="txt">
+                <span>百度</span>
+            </div>
+        </a>
+        <a href="#">
+            <div class="icon bd">
+            </div>
+            <div class="txt">
+                <span>百度</span>
+            </div>
+        </a>
+        <a href="#">
+            <div class="icon other"></div>
+            <div class="txt">
+                <span>添加更多</span>
+            </div>
+        </a>
+    </div>
+
+</body>
+
+</html>

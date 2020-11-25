@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        - 里面现存有  100 块钱。
+        - 如果存钱，就用输入钱数加上先存的钱数, 之后弹出显示余额提示框
+        - 如果取钱，就减去取的钱数，之后弹出显示余额提示框
+        - 如果显示余额，就输出余额
+        - 如果退出，弹出退出信息提示框
+     -->
+
+    <script>
+        var money = 100;
+        while (true) {
+            var run = prompt("请选择你的操作\n 1、存钱 \n 2、取钱\n 3、查询 \n 4、退卡")
+
+            if (run == 1 || run == "存钱") {
+                var z = prompt("你要存的钱数：") - 0
+                money += z;
+                alert("现在的余额为：" + money)
+            } else if (run == 2 || run == "取钱") {
+                var s = prompt("你要取的钱数：") - 0
+                while (s > money) {
+                    alert("余额不足")
+                    var s = prompt("确认取的钱数：") - 0
+                }
+
+                money -= s;
+                alert("剩余余额：" + money)
+
+            } else if (run == 3 || run == "查询") {
+                alert("卡内余额为：" + money)
+            } else if (run == 4 || run == "退卡") {
+                alert("谢谢光临...");
+                break;
+            } else {
+                alert("请正确操作，谢谢！！！")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

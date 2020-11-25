@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big_box {
+            width: 275px;
+            height: 187px;
+            background: url(images/bgi.jpg);
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .big_box div {
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            transform: translate(100%, 130%) rotate(45deg);
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        .big_box:hover div {
+            opacity: .5;
+            animation: move .5s forwards;
+        }
+
+        @keyframes move {
+            0% {}
+
+            100% {
+                transform: translate(0, 0) rotate(45deg) scale(3);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big_box">
+        <div></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+/* logo栏 */
+
+.top_logo {
+    height: 80px;
+}
+
+.top_logo .logo {
+    float: left;
+    height: 80px;
+    width: 160px;
+    background: url("../images/logo.png") no-repeat center;
+}
+
+.top_logo span {
+    float: left;
+    height: 80px;
+    width: 100px;
+    margin-left: 30px;
+    background: url("../images/l-icon.png") no-repeat center;
+}
+
+/* 中心关键登录 */
+
+.login {
+    height: 475px;
+    background-color: #3cbd58;
+}
+
+.login .login_center {
+    height: 475px;
+    background: url("../images/bg.jpg") no-repeat center;
+}
+
+.login .login_user {
+    float: right;
+    width: 346px;
+    height: 370px;
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.login .login_change {
+    height: 54px;
+    border-bottom: 1px solid #ccc;
+}
+
+.login .login_change li {
+    float: left;
+    width: 170px;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.login .login_change li:hover a {
+    color: #e4393c;
+}
+
+.login .login_change li a {
+    color: #666;
+}
+
+.login .login_change .shuxian {
+    width: 1px;
+    height: 20px;
+    background-color: #ccc;
+    margin-top: 17px;
+}
+
+.login .login_input {
+    padding: 0 20px;
+    height: 254px;
+    border-bottom: 1px solid #ccc;
+}
+
+.login .login_input p {
+    height: 24px;
+    font-size: 12px;
+    border: 1px solid #ffe57d;
+    background-color: #fff6d2;
+    color: #666666;
+    line-height: 24px;
+    margin: 10px 0;
+}
+
+.login .login_input p span {
+    display: block;
+    float: left;
+    width: 14px;
+    height: 18px;
+    margin: 3px 10px 0 18px;
+    background: url("../images/pwd-icons-new.png") no-repeat -104px -23px;
+}
+
+.login .login_input .username,
+.login .login_input .pwd {
+    height: 38px;
+    border: 1px solid #ccc;
+}
+
+.login .login_input .pwd {
+    margin-top: 20px;
+}
+
+.login .login_input .username span,
+.login .login_input .pwd span {
+    float: left;
+    width: 38px;
+    height: 38px;
+    background-color: #f3f3f3;
+}
+
+.login .login_input .username span {
+    background: url("../images/pwd-icons-new.png") no-repeat 0 0;
+}
+
+.login .login_input .pwd span {
+    background: url("../images/pwd-icons-new.png") no-repeat -48px 0;
+}
+
+.login .login_input .username .txt,
+.login .login_input .pwd .txt {
+    float: left;
+    height: 38px;
+    width: 217px;
+    border-left: 1px solid #ccc;
+    padding-left: 11px;
+    outline-style: none;
+}
+
+.login .login_input .username .btn,
+.login .login_input .pwd .btn {
+    float: left;
+    width: 13px;
+    height: 13px;
+    margin: 12px 12px;
+    background: url(../images/pwd-icons-new.png) no-repeat -104px 0;
+    outline-style: none;
+    cursor: pointer;
+}
+
+
+.login .login_input .other {
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #666666;
+    margin-top: 22px;
+}
+
+.login .login_input .other input {
+    float: left;
+}
+
+.login .login_input .other a {
+    float: right;
+    color: #666666;
+}
+
+.login .login_input .other a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.login .login_input .set {
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    background-color: #e4393c;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 16px;
+}
+
+.login .login_footer ul {
+    margin-top: 20px;
+    margin-left: 10px;
+    float: left;
+}
+
+.login .login_footer ul li {
+    float: left;
+    padding: 0 15px;
+    border-right: 1px solid #dbccdb;
+    font-size: 12px;
+}
+
+
+.login .login_footer ul li a:hover {
+    color: red;
+}
+
+.login .login_footer ul .last {
+    border: none;
+}
+
+.login .login_footer .zhuce {
+    float: right;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.login .login_footer .zhuce a span {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    background: red url("../images/pwd-icons-new.png") no-repeat -104px -75px;
+}
+
+.login .login_footer .zhuce a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.footer {
+    color: #666666;
+}
+
+.footer ul {
+    height: 14px;
+    font-size: 12px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    padding: 0 auto;
+
+}
+
+.footer ul li {
+    float: left;
+    padding: 0 14px;
+    border-right: 1px solid #ccc;
+
+}
+
+.footer ul .last {
+    border: none;
+}
+
+.footer ul li a {
+    color: #666666;
+}
+
+.footer ul li:hover a {
+    color: red;
+}
+
+.footer p {
+    text-align: center;
+    color: #666666;
+}

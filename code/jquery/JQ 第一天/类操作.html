@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 300px;
+            background-color: skyblue;
+            transition: all 1s;
+        }
+
+        .red {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>添加</button>
+    <button>删除</button>
+    <button>交换</button>
+
+    <div>123</div>
+
+    <script src="./js/jquery.min.js"></script>
+
+    <script>
+
+        $('button').eq(0).click(function () {
+            $('div').addClass('red')
+        })
+        $('button').eq(1).click(function () {
+            $('div').removeClass('red')
+        })
+        $('button').eq(2).click(function () {
+            $('div').toggleClass('red')
+        })
+    </script>
+
+</body>
+
+</html>

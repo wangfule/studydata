@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // let obj = {};
+        // let data = {
+
+        // };
+        // // data[obj] = 11;
+        // console.log(data) // {[object Object]: 11}
+
+
+
+        // let map = new Map();
+        // let obj = { a: 1 };
+
+        // // 可以用对象作为属性
+        // map.set(obj, 'haha');
+        // console.log(map);
+
+
+        // 可以用数组作为属性
+
+        // let map1 = new Map([['age', 'name'], [18, 'wang']])
+        // console.log(map1.get('age'));
+        // console.log(map.get(obj)) // haha
+        // console.log(map.has(obj)) // true
+        // map.delete(obj)
+        // console.log(map.has(obj)) // false
+
+
+        // 常用场景
+
+
+        var array = [{
+            title: '测试1',
+            status: 0,
+        }, {
+            title: '测试2',
+            status: 1,
+        }, {
+            title: '测试3',
+            status: 0,
+        }, {
+            title: '测试4',
+            status: 1
+        }]
+        console.log(array)
+        let status = array.map((item) => {
+            console.log(item);
+            return {
+                name: item.title,
+                statusText: item.status ? '通过' : '未通过'
+            }
+        })
+        console.log(status)
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        接收用户输入的用户名和密码，
+        若用户名为 “admin” ,密码为 “123456” ,则提示用户登录成功!  
+        否则，让用户一直输入。
+     -->
+
+    <script>
+        // do {
+        //     var name = prompt("输入账号：");
+        //     var pwd = prompt("输入密码：");
+        // } while (name !== "admin" || pwd !== "123456")
+
+
+        var name = prompt("输入账号：");
+        var pwd = prompt("输入密码：");
+
+        for (;;) {
+            if (name !== "admin" || pwd !== "123456") {
+                var name = prompt("再次输入账号：");
+                var pwd = prompt("再次输入密码：");
+            } else {
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>

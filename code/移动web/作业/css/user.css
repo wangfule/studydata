@@ -1,0 +1,129 @@
+.main {
+  background: url(../images/u_bg.png) no-repeat top center;
+  background-size: 100%;
+  background-color: #f9f9f9;
+  padding: 8.5rem 10px 7rem;
+}
+.main .user_hd {
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  background-color: #fff;
+  padding: 0 20px;
+  border-radius: 0.625rem /* 10/16 */;
+  box-shadow: 0px 5px 10px #ccc;
+}
+.main .user_hd .touxiang {
+  position: relative;
+  height: 6.25rem /* 100/16 */;
+  width: 6.25rem /* 100/16 */;
+}
+.main .user_hd .touxiang img {
+  width: 100%;
+  height: 100%;
+}
+.main .user_hd .touxiang i {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 1.5625rem /* 25/16 */;
+}
+.main .user_hd .touxiang i img {
+  width: 100%;
+}
+.main .user_hd .message {
+  flex: 1;
+  height: 6.25rem /* 100/16 */;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-left: 10px;
+}
+.main .user_hd .message h3 {
+  flex: 100%;
+  font-size: 1.25rem /* 20/16 */;
+}
+.main .user_hd .message p {
+  font-size: 0.875rem /* 14/16 */;
+}
+.main .user_hd .exit {
+  height: 6.25rem /* 100/16 */;
+  line-height: 6.25rem;
+}
+.main .user_hd .exit a {
+  color: #00A9FF;
+}
+.main .user_bd {
+  margin-top: 20px;
+}
+.main .user_bd .link {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px #ccc;
+}
+.main .user_bd .link li {
+  height: 5rem /* 80/16 */;
+  display: flex;
+}
+.main .user_bd .link li:last-child a {
+  border-bottom: none;
+}
+.main .user_bd .link li a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0 2.5rem /* 50/16 */;
+  border-bottom: 1px solid #ccc;
+}
+.main .user_bd .link li a i {
+  height: 2.5rem /* 40/16 */;
+  width: 2.5rem;
+}
+.main .user_bd .link li a i img {
+  width: 100%;
+  height: 100%;
+}
+.main .user_bd .link li a p {
+  flex: 1;
+  height: 2.5rem /* 60/16 */;
+  line-height: 2.5rem;
+  font-size: 1.5625rem /* 25/16 */;
+  margin-left: 10px;
+}
+.main .user_bd .link li a span {
+  font-size: 1.5625rem /* 25/16 */;
+  margin-right: 10px;
+}
+.main .user_bd .friendlink {
+  height: 5rem /* 80/16 */;
+  display: flex;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px #ccc;
+}
+.main .user_bd .friendlink a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0 2.5rem /* 50/16 */;
+}
+.main .user_bd .friendlink a i {
+  height: 2.5rem /* 40/16 */;
+  width: 2.5rem;
+}
+.main .user_bd .friendlink a i img {
+  width: 100%;
+  height: 100%;
+}
+.main .user_bd .friendlink a p {
+  flex: 1;
+  height: 2.5rem /* 60/16 */;
+  line-height: 2.5rem;
+  font-size: 1.5625rem /* 25/16 */;
+  margin-left: 10px;
+}
+.main .user_bd .friendlink a span {
+  font-size: 1.5625rem /* 25/16 */;
+  margin-right: 10px;
+}

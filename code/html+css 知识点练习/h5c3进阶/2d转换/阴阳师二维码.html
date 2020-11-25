@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big_box {
+            position: relative;
+            height: 248px;
+            width: 145px;
+            margin: 100px auto;
+            padding-top: 40px;
+            background: url(images/index_z_71df05e.png) no-repeat;
+
+        }
+
+        .erweima {
+            height: 107px;
+            width: 107px;
+            margin: 0 auto;
+        }
+
+        .erweima img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .line {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+
+            transform: translateX(-50%);
+            width: 120px;
+            animation: move 2s alternate infinite linear;
+        }
+
+        @keyframes move {
+            0% {}
+
+            100% {
+                transform: translate(-50%, 107px)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big_box">
+        <div class="erweima">
+            <img src="images/57b280b496dee47507111c56NRN73rVj.png" alt="">
+        </div>
+        <div class="line">
+            <img src="images/line_dd0b705.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

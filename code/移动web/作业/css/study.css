@@ -1,0 +1,58 @@
+.title h3 {
+  height: 3rem /* 30/16 */;
+  line-height: 3rem;
+  text-align: center;
+}
+.banner {
+  margin-top: 0;
+}
+.nav ul li {
+  flex: 20%;
+}
+.nav ul li a i {
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 5px 5px 10px #ccc;
+}
+.nav ul li a i img {
+  width: 80%;
+  margin-top: 0.3125rem /* 5/16 */;
+}
+.campsite {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 30px 0;
+}
+.campsite .cam_hd {
+  margin: 0 10px;
+}
+.campsite .cam_hd h3 {
+  font-size: 20px;
+}
+.campsite .cam_hd p {
+  font-size: 12px;
+}
+.campsite .cam_bd {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.campsite .cam_bd ul {
+  display: flex;
+  overflow: hidden;
+}
+.campsite .cam_bd ul li {
+  position: relative;
+  margin-right: 10px;
+}
+.campsite .cam_bd ul li img {
+  width: 22rem /* 400/16 */;
+}
+.campsite .cam_bd ul li p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 1rem;
+}

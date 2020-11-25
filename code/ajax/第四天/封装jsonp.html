@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮</button>
+
+    <script>
+
+
+        const $ = {
+            // 把对象转换为需要的字符串
+            changeStr: function (obj) {
+                if (obj && typeof obj === "object") {
+                    let arr = []
+                    for (let key in obj) {
+                        str = key + '=' + obj[key];
+                        arr.push(str)
+                    }
+                    return arr.join('&')
+                }
+            },
+            // 定义jsonp方法
+            jsonp: function (option) {
+                let url = option.url || location.href;
+                let data = this.changeStr(option.data) || '';
+
+                let script = document.createElement('script');
+                // 创建一个随机的回调函数名字
+                let cbName = option.jsonpCallback || "myJson" + Math.random().toString().substr(2);
+                // 添加一个window的对象,因为jsonp方法要放在window方法下
+                window[cbName] = function (res) {
+                    option.success(res);
+                    delete window[cbName];
+                    document.head.removeChild(script);
+
+                }
+                // 添加一个script标签，挺尸添加对应的src
+                script.src = url + "?" + data + "&callback=" + cbName;
+                document.head.appendChild(script);
+            }
+        }
+
+        // 调用jsonp方法
+        $.jsonp({
+            url: "https://suggest.taobao.com/sug",
+            data: {
+                q: "ni"
+            },
+            // jsonpCallback: 'abc',
+            success: function (res) {
+
+                console.log(res);
+            }
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

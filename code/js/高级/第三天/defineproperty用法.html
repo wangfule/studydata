@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <p></p>
+    <input type="text">输入
+
+    <script>
+
+        var obj = {}
+
+        var p = document.querySelector('p')
+        var inp = document.querySelector('input')
+
+
+        Object.defineProperty(obj, "txt", {
+            set: function (a) {
+                p.innerHTML = a;
+            }
+        })
+
+        inp.addEventListener('input', function () {
+            obj.txt = inp.value;
+        })
+
+    </script>
+
+</body>
+
+</html>

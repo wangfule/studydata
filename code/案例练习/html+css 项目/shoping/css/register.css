@@ -1,0 +1,160 @@
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    border-bottom: 2px solid #af1a1b;
+}
+
+header .logo {
+    margin: 17px 0 12px;
+}
+
+header .logo a {
+    display: block;
+    width: 175px;
+    height: 56px;
+}
+
+.registerarea {
+    margin-top: 20px;
+    height: 520px;
+    border: 1px solid #dedede;
+}
+
+.registerarea h3 {
+    height: 40px;
+    background-color: #ececec;
+    border-bottom: 1px solid #dedede;
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.registerarea h3 .login {
+    float: right;
+    font-size: 14px;
+}
+
+.registerarea h3 .login a {
+    color: #cc1323;
+}
+
+.registerarea .reg_form {
+    width: 600px;
+    margin: 54px auto 0;
+}
+
+.registerarea .reg_form li {
+    margin-bottom: 20px;
+}
+
+.registerarea .reg_form li label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+.registerarea .reg_form .inp {
+    width: 228px;
+    height: 34px;
+    border: 1px solid #999999;
+    margin: 0 10px;
+    padding-left: 10px;
+}
+
+.error {
+    color: #cc1323;
+}
+
+.error_icon,
+.success_icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+.error_icon {
+    background: url(../images/error.png) no-repeat;
+
+}
+
+.success {
+    color: green;
+}
+
+.success_icon {
+    background: url(../images/success.png) no-repeat;
+}
+
+.safe {
+    padding-left: 188px;
+}
+
+.safe em {
+    padding: 0 10px;
+    color: #fff;
+}
+
+.safe em:nth-child(1) {
+    background-color: #df130f;
+}
+
+.safe em:nth-child(2) {
+    background-color: #40b941;
+}
+
+.safe em:nth-child(3) {
+    background-color: #f79200;
+}
+
+.agree {
+    padding-left: 110px;
+}
+
+.agree input {
+    vertical-align: middle;
+}
+
+.agree a {
+    color: #189ce1;
+}
+
+.btn {
+    padding-left: 120px;
+    margin-top: 30px;
+}
+
+.btn input {
+    height: 34px;
+    width: 200px;
+    background-color: #c81822;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* 脚部css */
+footer {
+    height: 120px;
+}
+
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.links {
+    margin-bottom: 15px;
+}
+
+.links a {
+    margin: 0 3px;
+}
+
+.copyright {
+    line-height: 20px;
+}

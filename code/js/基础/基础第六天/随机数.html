@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+
+        [5,20]
+        
+
+        猜数字  
+        随机一个数，然后让用户猜，猜对退出，猜错提示，10次机会
+
+
+     -->
+
+
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+        var a = prompt("有个1-10 的数，3次机会哦，猜猜是几：")
+
+
+        var jh = 3
+
+        for (var i = 1; i <= jh; i++) {
+            var r = getRandom(1, 10);
+            console.log(r);
+
+            if (a > r) {
+                if (i < 3) {
+                    a = prompt("大了，再猜猜：")
+                } else {
+                    alert("3次机会用完喽！！！")
+
+                }
+            } else if (a < r) {
+                if (i < 3) {
+                    a = prompt("小了，再猜猜：")
+                } else {
+                    alert("3次机会用完喽！！！")
+
+                }
+            } else if (a == r) {
+                alert("对了，不错嘛")
+                num = false;
+                break;
+            } else {
+                if (i < 3) {
+                    a = prompt("数字！！数字，再猜：")
+                } else {
+                    alert("多可惜，不是数字浪费了一次机会，3次机会还完了")
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

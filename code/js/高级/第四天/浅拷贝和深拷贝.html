@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 深拷贝
+
+        var data = [
+            {
+                id: 1,
+                gname: '手机',
+                goods: [
+                    {
+                        id: 11,
+                        gname: '苹果',
+                        goods: [
+                            {
+                                id: 111,
+                                gname: 'iphone 11'
+                            },
+                            {
+                                id: 112,
+                                gname: 'iphone 12'
+                            }
+                        ]
+                    }, {
+                        id: 12,
+                        gname: '华为'
+                    }
+                ]
+            }, {
+                id: 2,
+                gname: '电视'
+            }
+        ]
+
+
+
+        var newArr = [];
+        function copyArr(newArr, oldArr) {
+            for (var k in oldArr) {
+                if (oldArr[k] instanceof Array) {
+                    newArr[k] = []
+                    copyArr(newArr[k], oldArr[k])
+                } else if (oldArr[k] instanceof Object) {
+                    newArr[k] = {}
+                    copyArr(newArr[k], oldArr[k])
+
+                } else {
+                    newArr[k] = oldArr[k]
+                }
+            }
+            return newArr;
+        }
+
+        copyArr(newArr, data)
+
+        newArr[0].id = 20;
+        console.log(newArr);
+
+        console.log(data);
+
+    </script>
+
+
+</body>
+
+</html>

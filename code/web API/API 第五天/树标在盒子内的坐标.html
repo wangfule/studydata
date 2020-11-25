@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .one {
+            position: absolute;
+            width: 400px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            margin-left: -200px;
+            margin-top: -100px;
+            /* transform: translate(-50%, -50%); */
+            background-color: pink;
+            cursor: auto
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+
+    </div>
+
+
+    <script>
+        var dv = document.querySelector('div');
+        // console.log(dv[0].offsetLeft);
+        var x = 0;
+        var y = 0;
+
+
+        dv.addEventListener('mousedown', function (e) {
+            console.log('按下');
+            x = e.pageX - dv.offsetLeft;
+            y = e.pageY - dv.offsetTop;
+            dv.style.cursor = 'move'
+            dv.addEventListener('mousemove', move)
+            // console.log('鼠标与屏幕的距离' + e.pageY + '鼠标与框的距离' + y + '框与屏幕的距离' + dv.offsetTop);
+
+
+        })
+
+        function move(e) {
+            console.log('移动');
+            // console.log(e.pageY);
+            console.log(e.pageY - y);
+            dv.style.top = (e.pageY - y) + 'px';
+            dv.style.left = (e.pageX - x) + 'px';
+            dv.style.margin = '0'
+
+        }
+        dv.addEventListener('mouseup', function () {
+            console.log("弹起");
+            dv.removeEventListener('mousemove', move)
+            dv.style.cursor = 'auto'
+
+        })
+        dv.addEventListener('mouseout', function () {
+            console.log("离开");
+            dv.removeEventListener('mousemove', move)
+            dv.style.cursor = 'auto'
+
+
+        })
+    </script>
+
+</body>
+
+</html>

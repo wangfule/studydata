@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            margin: 100px auto;
+        }
+
+        textarea {
+            width: 200px;
+            height: 100px;
+            outline-style: none;
+            border: 1px solid blue;
+            padding: 5px;
+            resize: none;
+
+        }
+
+        button {
+            width: 100px;
+            margin-left: 50px;
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 5px;
+            /* height: 30px; */
+            line-height: 30px;
+            background-color: rgb(101, 101, 240);
+
+        }
+
+        span {
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <textarea></textarea>
+        <button>发布</button>
+        <ul>
+
+        </ul>
+
+    </div>
+    <script>
+        var txt = document.querySelector('textarea')
+        // console.log(txt);
+        var btn = document.querySelector('button')
+        var ul = document.querySelector('ul')
+
+        btn.onclick = function () {
+            if (txt.value.length == 0) {
+                alert('请输入内容')
+            } else {
+                var lis = document.createElement('li');
+                var span = document.createElement('span');
+                span.innerHTML = '删除'
+                // var span = '<span>删除</span>'
+                lis.innerHTML = txt.value
+                lis.appendChild(span)
+                ul.insertBefore(lis, ul.children[0])
+                // ul.appendChild(lis)
+                txt.value = ""
+
+                span.onclick = function () {
+                    console.log(123);
+                    this.parentNode.parentNode.removeChild(this.parentNode);
+
+                }
+
+            }
+            // var del = ul.querySelectorAll('span');
+            // console.log(del);
+            // for (var i = 0; i < del.length; i++) {
+            //     del[i].onclick = function () {
+            //         this.parentNode.parentNode.removeChild(this.parentNode);
+            //     }
+            // }
+
+        }
+    </script>
+</body>
+
+</html>

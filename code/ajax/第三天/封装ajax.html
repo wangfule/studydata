@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const $ = {
+
+            // 把传进来的对象转换为key=value 键值对
+            strChange: function (obj) {
+                if (obj && typeof obj == "object") {
+                    let arr = []
+                    for (let key in obj) {
+                        let str = key + '=' + obj[key];
+                        arr.push(str)
+                    }
+                    return arr.join('&')
+                }
+            },
+
+            // ajax方法
+            ajax: function (option) {
+                let type = option.type || "GET";
+                let url = option.url || location.href;
+                let data = this.strChange(option.data || "");
+                let success = option.success;
+
+
+                // 创建xhr对象
+                let xhr = new XMLHttpRequest();
+
+
+                if (type.toUpperCase() === "GET") {
+                    url = url + "?" + data;
+                    data = null
+                }
+                // 调用open
+                xhr.open(type, url);
+
+                if (type.toUpperCase() === "POST") {
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+                }
+
+                // 调用send
+                xhr.send(data);
+
+                // 监控
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        console.log(JSON.parse(xhr.responseText));
+                        return success = JSON.parse(xhr.responseText)
+                    }
+                }
+
+            }
+        }
+
+
+
+        $.ajax({
+            type: "get",
+            url: "http://www.liulongbin.top:3006/api/getbooks",
+            data: {},
+            success: function () { }
+        })
+
+        $.ajax({
+            type: "post",
+            url: "http://www.liulongbin.top:3006/api/addbook",
+            data: {
+                bookname: 'aaa',
+                author: 'bbb',
+                publisher: 'cc图书出版社'
+            },
+            success: function () { }
+        })
+    </script>
+
+
+</body>
+
+</html>

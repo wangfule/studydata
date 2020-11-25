@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+        <div></div>
+
+        <script>
+            var div = document.querySelector('div')
+            var x = 0;
+            var y = 0;
+            div.onmousedown = function(e){
+                x = e.pageX - div.offsetLeft;
+                y = e.pageY - div.offsetTop;
+                console.log("原始位置"+ x);
+
+                div.addEventListener('mousemove',move)
+
+            }
+
+            div.onmouseup = function(){
+                div.removeEventListener('mousemove',move)
+            }
+
+            function move(e){
+                div.style.top = e.pageY - y+"px"
+                div.style.left = e.pageX - x+"px"
+            }
+
+        </script>
+
+</body>
+</html>

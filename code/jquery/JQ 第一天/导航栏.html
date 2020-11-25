@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .nav {
+            width: 300px;
+            margin: 100px auto;
+        }
+
+        .nav>ul>li {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .nav div {
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .nav ul ul {
+            display: none;
+        }
+
+        .nav ul ul li {
+            border: 1px solid red;
+            border-top: none;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <div>微软</div>
+                <ul>
+                    <li>小冰</li>
+                    <li>小冰</li>
+                    <li>小冰</li>
+
+                </ul>
+            </li>
+            <li>
+                <div>微软</div>
+                <ul>
+                    <li>小冰</li>
+                    <li>小冰</li>
+                    <li>小冰</li>
+
+                </ul>
+            </li>
+            <li>
+                <div>微软</div>
+                <ul>
+                    <li>小冰</li>
+                    <li>小冰</li>
+                    <li>小冰</li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.nav>ul>li').mouseover(function () {
+                $(this).children().eq(1).stop().slideDown()
+            })
+            $('.nav>ul>li').mouseout(function () {
+                $(this).children().eq(1).stop().slideUp()
+            })
+        })
+    </script>
+
+</body>
+
+</html>

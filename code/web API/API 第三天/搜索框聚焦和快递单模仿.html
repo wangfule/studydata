@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .search {
+            width: 300px;
+            margin: 100px auto;
+            /* border: 1px solid red; */
+        }
+
+        .con {
+            display: none;
+            position: absolute;
+            border: 1px solid #ccc;
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 5px;
+            background-color: pink;
+            font-size: 30px;
+            /* overflow: hidden; */
+        }
+
+        .con::after {
+            position: absolute;
+            content: "";
+            bottom: -20px;
+            left: 20px;
+            border: 10px solid transparent;
+            border-top-color: pink;
+        }
+
+        input {
+            width: 200px;
+            margin-top: 40px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="search">
+        <div class="con">1</div>
+        <input type="text" placeholder="请输入快递单号">
+    </div>
+
+    <script>
+        var inp = document.querySelector('input')
+        var con = document.querySelector('.con')
+
+        document.addEventListener('keyup', function (e) {
+            // console.log(e.keyCode);
+            if (e.keyCode == 83) {
+                inp.focus();
+            }
+
+            if (inp.value.length == 0) {
+                con.style.display = 'none'
+            } else {
+                con.style.display = 'block'
+                con.innerHTML = inp.value
+
+            }
+
+        })
+
+        inp.addEventListener('blur', function () {
+            con.style.display = 'none'
+        })
+        inp.addEventListener('focus', function () {
+            if (inp.value.length == 0) {
+                con.style.display = 'none'
+            } else {
+                con.style.display = 'block'
+
+            }
+
+        })
+    </script>
+
+</body>
+
+</html>

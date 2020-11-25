@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>nihao</li>
+        <li>nihao</li>
+        <li>nihao</li>
+        <li>nihao</li>
+        <li>nihao</li>
+        <li>nihao</li>
+    </ul>
+
+    <script src="./js/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            
+
+            console.log($("li:odd"));
+            function fn(){
+                $("li:odd").css('backgroundColor','skyblue')
+                $("li:even").css('backgroundColor','green')
+            }
+            fn()
+            
+            $('li').hover(function(){
+                $(this).css('backgroundColor','red')
+            },function(){
+                fn()
+            })
+
+            // $('li').mouseover(function(){
+            //     $(this).css('backgroundColor','red')
+            // })
+            // $('li').mouseout(function(){
+            //     fn()
+               
+            // })
+
+        })
+    </script>
+
+</body>
+</html>

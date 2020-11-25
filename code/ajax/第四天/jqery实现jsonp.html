@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // function www(data) {
+        //     console.log(data);
+        // }
+
+
+        // $(function () {
+        //     $.ajax({
+        //         url: 'http://192.168.37.82:3006/jsonp?name = zs',
+        //         dataType: 'jsonp',
+        //         jsonpCallback: 'abc',
+        //         success: function (res) {
+
+
+        //             console.log(res);
+        //         }
+        //     })
+        // })
+
+
+
+    </script>
+
+    <script>
+
+        $.ajax({
+            type: 'POST',
+            url: 'http://192.168.37.82:3006/jsonp',
+            data: {},
+            success: function (res) {
+                console.log(res);
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

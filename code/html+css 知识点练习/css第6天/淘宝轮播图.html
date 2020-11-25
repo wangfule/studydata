@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .tb_promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            margin: 100px auto;
+        }
+
+        .tb_promo img {
+            width: 520px;
+            height: 280px;
+        }
+
+        .tb_promo:hover .prev,
+        .tb_promo:hover .next {
+            display: block;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            height: 30px;
+            width: 20px;
+            line-height: 30px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .3);
+            color: #fff;
+            text-decoration: none;
+            display: none;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 15px 0 0 15px;
+        }
+
+        .promo_nav {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            margin-left: -40px;
+            width: 80px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, .7);
+            border-radius: 10px;
+        }
+
+        .promo_nav li {
+            float: left;
+            background-color: #fff;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            margin: 6px;
+        }
+
+        .promo_nav .first {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb_promo">
+        <img src="images/tb.jpg" alt="">
+        <a href="#" class="prev">&lt;</a>
+        <a href="#" class="next"> &gt;</a>
+
+        <ul class="promo_nav">
+            <li class="first"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 500px;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        input {
+            float: left;
+        }
+
+        p {
+            float: left;
+            padding-left: 20px;
+            margin-left: 20px;
+            background: url(images/mess.png) no-repeat left;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="password" value="123">
+        <p>请输入6~16位密码</p>
+    </div>
+
+
+    <script>
+        var inp = document.querySelector('input');
+        var p = document.querySelector('p')
+
+        inp.onblur = function () {
+            console.log(inp.value.length);
+            if (inp.value.length < 6 || inp.value.length > 16) {
+                p.style.backgroundImage = "url(images/wrong.png)"
+                p.innerHTML = "您输入的位数不对要求6~16位"
+            } else {
+                p.style.backgroundImage = "url(images/right.png)"
+                p.innerHTML = "您输入的正确"
+            }
+        }
+    </script>
+
+</body>
+
+</html>

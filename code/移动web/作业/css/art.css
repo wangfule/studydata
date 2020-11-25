@@ -1,0 +1,40 @@
+.banner {
+  margin-top: 0;
+}
+.nav ul li a i {
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 5px 5px 10px #ccc;
+}
+.nav ul li a i img {
+  width: 80%;
+  margin-top: 0.3125rem /* 5/16 */;
+}
+.product {
+  margin-top: 10px;
+}
+.product .pro_bd ul li p {
+  font-size: 1.5625rem /* 25/16 */;
+}
+.product .pro_bd ul li i {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 5.65rem /* 90/16 */;
+  height: 6.25rem /* 100/16 */;
+  background: url(../images/art_hot.png) no-repeat center;
+  background-size: 100%;
+  text-align: center;
+}
+.product .pro_bd ul li i h3 {
+  color: #fff;
+  margin-top: 5px;
+}
+.product .pro_bd ul li i h3 span {
+  font-size: 2rem /* 30/16 */;
+}
+.product .pro_bd ul li i p {
+  font-size: 1rem;
+}

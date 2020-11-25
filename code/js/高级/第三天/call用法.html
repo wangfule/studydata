@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function Father(name, age) {
+
+            console.log(this);
+            this.name = name;
+            this.age = age;
+        }
+
+        function Son(name, age) {
+
+            console.log(this);
+
+            // 可以调用方法,同时改变this的指向
+            Father.call(this, name, age)
+        }
+
+        var s = new Son('张三', 18);
+        console.log(s);
+
+    </script>
+
+</body>
+
+</html>

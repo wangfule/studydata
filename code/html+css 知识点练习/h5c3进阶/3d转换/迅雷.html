@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body {
+            background-color: #080325;
+        }
+
+        .wrapper {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            position: relative;
+            z-index: 1;
+            transition: all 1s;
+            height: 84px;
+
+        }
+
+        header:hover {
+            background-color: rgba(0, 0, 0, .7);
+        }
+
+        .logo {
+            float: left;
+            margin-top: 8px;
+        }
+
+        .nav ul {
+            float: right;
+        }
+
+        .nav ul li {
+            float: left;
+            height: 82px;
+            margin-right: 50px;
+            line-height: 82px;
+        }
+
+        .nav ul li:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        .nav li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            height: 640px;
+            width: 1200px;
+            background: url(images/banner_bg.jpg) no-repeat center;
+        }
+
+        .img {
+            width: 400px;
+            height: 400px;
+            margin: 50px auto;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .big_quan {
+            position: absolute;
+            top: -110px;
+            left: 238px;
+            width: 720px;
+            height: 720px;
+            background: url(images/spr_bannerPathway.png) no-repeat right top;
+
+            animation: zhuan 20s infinite linear;
+            transform: scale(0.55);
+        }
+
+        @keyframes zhuan {
+            0% {}
+
+            100% {
+                transform: scale(0.55) rotate(360deg);
+            }
+        }
+
+        .small_quan {
+            position: absolute;
+            top: -78px;
+            left: 274px;
+            width: 655px;
+            height: 655px;
+            background: url(images/spr_bannerPathway.png) no-repeat -2433px -730px;
+            /* transform: scale(0.55); */
+            animation: ni 5s infinite linear;
+            transform: scale(0.55);
+        }
+
+        @keyframes ni {
+            0% {}
+
+            100% {
+                transform: scale(0.55) rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="images/xl-logo2x.png" alt="">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">产品中心</a></li>
+                    <li><a href="#">产品中心</a></li>
+                    <li><a href="#">产品中心</a></li>
+                    <li><a href="#">产品中心</a></li>
+                    <li><a href="#">产品中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="content">
+            <div class="img">
+                <img src="images/earth01.png" alt="">
+            </div>
+            <div class="big_quan"></div>
+            <div class="small_quan"></div>
+        </div>
+    </div>
+</body>
+
+</html>

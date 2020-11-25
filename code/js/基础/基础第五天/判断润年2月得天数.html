@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 先来判断一下是不是闰年
+
+        var a = prompt("输入一个年：")
+
+        function run(nian) {
+            if (nian % 4 == 0 && nian % 100 != 0 || nian % 400 == 0) {
+                // console.log(nian + "是个闰年");
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function er() {
+            if (run(a)) {
+                console.log("是闰年，有29天");
+            } else {
+                console.log("不是闰年，有28天");
+            }
+        }
+
+        er(a);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="file" name="" id="file1">
+
+    <input type="button" value="提交" id="btn">
+
+
+    <script src="./js/jquery.js"></script>
+
+    <script>
+        $(function () {
+
+            $(document).ajaxStart(function () {
+                console.log('文件上传中');
+            })
+
+            $(document).ajaxStop(function () {
+                console.log("文件上传结束");
+            })
+
+            $("#btn").on('click', function () {
+                let files = $("#file1")[0].files;
+
+                let fd = new FormData();
+                fd.append('avatar', files[0])
+
+                $.ajax({
+                    type: "POST",
+                    url: "http://www.escook.cn:3006/api/upload/avatar",
+                    data: fd,
+                    //禁止数据自动转换成字符串传到后台
+                    processData: false,
+                    // 去掉contentType设置的值,用formdata自带的值
+                    contentType: false,
+                    success: function (res) {
+                        console.log(res);
+                    }
+                })
+
+            })
+
+        })
+
+    </script>
+
+</body>
+
+</html>

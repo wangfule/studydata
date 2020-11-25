@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin-top: 30px;
+            border-collapse: collapse;
+        }
+
+        thead tr {
+            background-color: purple;
+            color: #fff;
+
+        }
+
+        th,
+        td {
+            border: 2px solid #000;
+        }
+
+        thead tr th:first-child {
+            width: 100px;
+
+        }
+
+        thead tr th:last-child {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    请输入姓名：<input type="text"><br>
+    请输入邮箱：<input type="text"><br>
+    <button>添加</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>邮箱</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+
+
+
+    <script>
+        var btn = document.querySelector('button');
+        var inps = document.querySelectorAll('input');
+        var tbody = document.querySelector('tbody');
+
+        btn.onclick = function () {
+            if (inps[0].value.length == 0 || inps[1].value.length == 0) {
+                alert('姓名和邮箱都要填哦！')
+            } else {
+                var tr = document.createElement('tr');
+                // 追加到最后面的
+                tbody.appendChild(tr);
+                // 追加到指定元素的最前面
+                // tbody.insertBefore(tr, tbody.children[0])
+
+                var td1 = document.createElement('td')
+                var td2 = document.createElement('td')
+                td1.innerHTML = inps[0].value;
+                td2.innerHTML = inps[1].value
+                tr.appendChild(td1)
+                tr.appendChild(td2)
+
+                inps[0].value = ""
+                inps[1].value = ""
+
+
+            }
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

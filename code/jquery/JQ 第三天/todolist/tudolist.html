@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <section>
+            <label for="title">ToDoList</label>
+            <input type="text" id="title" name="title" placeholder="添加ToDo" required="required" autocomplete="off" />
+        </section>
+    </header>
+    <section>
+        <h2>正在进行 <span id="todocount"></span></h2>
+        <ol id="todolist" class="demo-box">
+
+        </ol>
+        <h2>已经完成 <span id="donecount"></span></h2>
+        <ul id="donelist">
+
+        </ul>
+    </section>
+    <footer>
+        Copyright &copy; 2014 todolist.cn
+    </footer>
+
+
+    <script>
+        $(function () {
+
+
+            // 页面加载先拿数据  把里面存储的字符串转换为对象形式
+            var data = JSON.parse(localStorage.getItem('todo'))
+            data = data ? data : []
+
+            // data = [{
+            //     title: '13123',
+            //     done: false
+            // }, {
+            //     title: 'adadada',
+            //     done: true
+            // }
+            // ]
+            xuanran();
+            function xuanran() {
+                $('ul,ol').empty()
+                //循环遍历数组,根据数组里每个对象的done属性来判断最终渲染到哪个列表里面
+                $(data).each(function (index, domEle) {
+                    if (domEle.done) {
+                        var li = $('<li><input type = "checkbox" checked id=' + index + '><p>' + domEle.title + '</p><a href = "javascript:;"</li>')
+                        $('ul').prepend(li)
+                    } else {
+                        var li = $('<li><input type = "checkbox" id=' + index + '><p>' + domEle.title + '</p><a href = "javascript:;"</li>')
+                        $('ol').prepend(li)
+
+                    }
+                })
+                // 计算ol和ul里面都有多少条数据
+                $('#todocount').text($('ol').children().length)
+                $('#donecount').text($('ul').children().length)
+            }
+
+
+            // 点击回车，把输入的内容给加到缓存里，并显示出来
+
+            $(document).keyup(function (e) {
+
+                if (e.keyCode == 13) {
+
+                    if ($('#title').val().length > 0) {
+
+                        // 当输入框有数据是,吧数据给title,并附上done的初始值为false 没有选定的情况,
+                        data[data.length] = {
+                            title: $('#title').val(),
+                            done: false
+                        }
+                        // 然后把数据转换为字符串的形式存储到localStorage中
+                        localStorage.setItem('todo', JSON.stringify(data))
+                        // 然后渲染出来
+                        xuanran()
+                    } else {
+                        alert('请输入内容！！！')
+                    }
+                }
+            })
+
+
+
+            //点击ul的input 转换  通过on来绑定到里面冬天添加的input标签上面
+            $("ol").on('click', 'input', function () {
+                // 获取localstotage里面存储的值转换为对象
+                data = JSON.parse(localStorage.getItem('todo'))
+                // 查找点击元素的属性id来修改done的值为true
+                data[$(this).prop('id')].done = true;
+                // 把修改过后的值再转换为字符串存储到本地
+                localStorage.setItem('todo', JSON.stringify(data))
+                xuanran()
+            })
+            $("ul").on('click', 'input', function () {
+                data = JSON.parse(localStorage.getItem('todo'))
+                data[$(this).prop('id')].done = false;
+                localStorage.setItem('todo', JSON.stringify(data))
+                xuanran()
+            })
+
+
+            $('ol,ul').on('click', 'a', function () {
+                data = JSON.parse(localStorage.getItem('todo'))
+                // 通过兄弟元素input找到自己,然后删除掉自己
+                data.splice($(this).siblings('input').prop('id'), 1)
+                localStorage.setItem('todo', JSON.stringify(data))
+                xuanran()
+            })
+
+
+
+        })
+    </script>
+
+
+</body>
+
+</html>

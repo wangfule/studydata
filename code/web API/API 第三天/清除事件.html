@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div>传统模式</div>
+    <div>新的方式</div>
+
+    <script>
+        var divs = document.querySelectorAll('div');
+
+        divs[0].onclick = function () {
+            console.log("传统——点击过了");
+            divs[0].onclick = null
+        }
+        divs[1].addEventListener('click', fn)
+
+        function fn() {
+            console.log("新——被点击");
+            divs[1].removeEventListener('click', fn)
+
+        }
+    </script>
+
+
+</body>
+
+</html>

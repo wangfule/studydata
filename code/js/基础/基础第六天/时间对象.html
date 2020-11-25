@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var now = new Date();
+        console.log(now);
+
+        console.log(now.getHours());
+
+        var future = new Date("2020-10-15 23:59:59")
+
+
+        var timer = Math.floor((future - now) / 1000);
+
+        console.log(timer);
+
+        var tian = Math.floor(timer / 60 / 60 / 24);
+        console.log(tian);
+        tian < 10 ? '0' + tian : tian
+
+        var shi = Math.floor(timer / 60 / 60 % 24);
+        console.log(shi);
+        shi < 10 ? '0' + shi : shi
+
+        var fen = Math.floor(timer / 60 % 60);
+        console.log(fen);
+        fen < 10 ? '0' + fen : fen
+
+        var miao = timer % 60;
+        console.log(miao);
+
+
+        var djs = tian + '天 ' + shi + "小时 " + fen + '分钟 ' + miao + '秒';
+
+        console.log(djs);
+    </script>
+
+
+</body>
+
+</html>

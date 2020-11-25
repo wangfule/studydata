@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var s = (function () {
+            var strat = 13;
+            var total = 0;
+
+            return {
+                price: function (n) {
+                    if (n <= 3) {
+                        total = strat;
+                    } else {
+                        total = strat + (n - 3) * 5
+                    }
+                    return total;
+                },
+                yd: function (flag) {
+                    return flag ? total + 10 : total;
+                }
+            }
+        })()
+
+        console.log(s.price(5));
+        console.log(s.yd(true));
+
+        console.log(s.price(10));
+        console.log(s.yd(false));
+
+    </script>
+
+</body>
+
+</html>

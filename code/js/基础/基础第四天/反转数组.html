@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function fan(a) {
+            var newArr = [];
+            for (var i = a.length - 1; i >= 0; i--) {
+                newArr[newArr.length] = a[i];
+            }
+            console.log(newArr);
+        }
+
+        var arr = [12, 13, 14, 15, 16, 17]
+        console.log(arr);
+        fan(arr)
+    </script>
+
+</body>
+
+</html>

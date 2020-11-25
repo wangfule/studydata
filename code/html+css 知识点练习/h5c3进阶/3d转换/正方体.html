@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body {
+            perspective: 10000px;
+        }
+
+        ul {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg) rotateY(-30deg);
+        }
+
+        li {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        /* 正 */
+        li:last-child {
+            background-color: red;
+            transform: translateZ(100px);
+        }
+
+        /* 背 */
+        li:nth-child(4) {
+            background-color: green;
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        /* 右 */
+        li:nth-child(2) {
+            background-color: blue;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        /* 左 */
+        li:nth-child(3) {
+            background-color: yellow;
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        /* 上 */
+        li:nth-child(1) {
+            background-color: pink;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        li:nth-child(5) {
+            background-color: orange;
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>上</li>
+        <li>右</li>
+        <li>左</li>
+        <li>背</li>
+        <li>下</li>
+        <li>正</li>
+    </ul>
+</body>
+
+</html>

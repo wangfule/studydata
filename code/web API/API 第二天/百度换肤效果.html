@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        ul {
+            width: 480px;
+            margin: 100px auto;
+        }
+
+        li {
+            width: 100px;
+            float: left;
+            margin: 10px;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li><img src="images/1.jpg" alt=""></li>
+        <li><img src="images/2.jpg" alt=""></li>
+        <li><img src="images/3.jpg" alt=""></li>
+        <li><img src="images/4.jpg" alt=""></li>
+    </ul>
+
+
+    <script>
+        var imgs = document.querySelectorAll("img")
+        var body = document.querySelector('body')
+
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].a = i
+            console.log(imgs[i].a);
+
+            imgs[i].onclick = function () {
+                body.style.backgroundImage = 'url(' + this.src + ')'
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

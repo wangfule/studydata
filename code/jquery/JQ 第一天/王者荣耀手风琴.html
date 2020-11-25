@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+            overflow: hidden;
+        }
+
+        ul li {
+            float: left;
+            width: 69px;
+            height: 69px;
+            margin-left: 5px;
+            margin-top: 25px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .current {
+            width: 230px;
+            height: 69px;
+        }
+
+        ul li img {
+
+            height: 100%;
+        }
+
+        .big {
+            display: none;
+        }
+
+        .current .big {
+            display: block;
+        }
+
+        .current .small {
+            display: none;
+        }
+
+        div {
+            width: 772px;
+            height: 115px;
+            margin: 100px auto;
+            background: url(./images/bg.png) no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li class="current"><img src="images/c1.jpg" class="small" alt=""><img src="images/c.png" class="big"
+                    alt=""></li>
+            <li><img src="images/l1.jpg" class="small" alt=""><img src="images/l.png" class="big" alt=""></li>
+            <li><img src="images/m1.jpg" class="small" alt=""><img src="images/m.png" class="big" alt=""></li>
+            <li><img src="images/w1.jpg" class="small" alt=""><img src="images/w.png" class="big" alt=""></li>
+            <li><img src="images/z1.jpg" class="small" alt=""><img src="images/z.png" class="big" alt=""></li>
+            <li><img src="images/t1.jpg" class="small" alt=""><img src="images/t.png" class="big" alt=""></li>
+            <li><img src="images/h1.jpg" class="small" alt=""><img src="images/h.png" class="big" alt=""></li>
+        </ul>
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('li').mouseover(function () {
+                $(this).stop().animate({
+                    width: 230
+                }).find('.small').stop().fadeOut(50).siblings('.big').stop().fadeIn(100)
+            })
+
+            $('li').mouseout(function () {
+                $(this).siblings().stop().animate({
+                    width: 69
+                }).find('.small').stop().fadeIn(100).siblings('.big').stop().fadeOut(100)
+            })
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: fixed;
+        }
+
+        body {
+            height: 2000px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="./images/angel.gif" alt="">
+
+    <script>
+        var img = document.querySelector('img')
+
+        document.addEventListener('mousemove', function (e) {
+            // console.log(e.clientX);
+            img.style.top = e.clientY - 48 + 'px';
+            img.style.left = e.clientX - 40 + 'px';
+        })
+    </script>
+
+</body>
+
+</html>

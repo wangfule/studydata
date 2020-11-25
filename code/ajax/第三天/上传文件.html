@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+
+<body>
+
+    <input type="file" id="wj">
+    <input type="button" value="上传" id="uploadBtn">
+    <br />
+
+    <!-- 进度条 -->
+    <div class="progress" id="jd_p" style="width: 500px;">
+        <div class="progress-bar" id="jd" style="width: 0%;">
+            0%
+        </div>
+    </div>
+
+    <img src="" alt="" style="width: 800px;" id="fileImg">
+
+    <script>
+
+        // 获取到上传按钮,添加监听事件
+
+        let btn = document.querySelector('#uploadBtn');
+        btn.addEventListener('click', function () {
+            let file = document.querySelector('#wj').files;
+            if (file.length <= 0) {
+                return alert("请添加文件")
+            }
+            // 创建formdata对象,同时把数据获取的数据添加进去
+
+            let fd = new FormData();
+            console.log(file[0]);
+            fd.append("avatar", file[0])
+
+            // 创建xhr对象,然后把获取到的数据post
+
+            let xhr = new XMLHttpRequest();
+
+
+            xhr.open('POST', "http://www.escook.cn:3006/api/upload/avatar");
+
+
+            // 监听文件上传 必须要写在send方法之前
+            xhr.upload.onprogress = function (e) {
+                // 判断一下
+                if (e.lengthComputable) {
+                    let jd = Math.ceil((e.loaded / e.total) * 100);
+                    console.log(jd);
+
+                    document.querySelector('#jd').className = 'progress-bar';
+
+                    document.querySelector('#jd').style.width = jd + "%";
+                    document.querySelector('#jd').innerHTML = jd + "%";
+
+                }
+            }
+
+            // 文件上传成功事件
+            xhr.upload.onload = function () {
+                // document.querySelector('#jd').className = '';
+                document.querySelector('#jd').className = 'progress-bar progress-bar-success';
+            }
+
+            xhr.send(fd);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    console.log(JSON.parse(xhr.responseText));
+                    let img = document.querySelector('#fileImg');
+                    img.src = "http://www.escook.cn:3006" + JSON.parse(xhr.responseText).url
+                }
+            }
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>

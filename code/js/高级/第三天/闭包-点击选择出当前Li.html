@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <Li>1</Li>
+        <Li>2</Li>
+        <Li>3</Li>
+        <Li>4</Li>
+    </ul>
+
+
+    <script>
+
+        var lis = document.querySelectorAll('li')
+
+        for (var i = 0; i < lis.length; i++) {
+            (function (i) {
+                lis[i].onclick = function () {
+                    console.log(i);
+                }
+            })(i)
+        }
+
+    </script>
+
+</body>
+
+</html>

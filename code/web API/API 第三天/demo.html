@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            background-color: red;
+        }
+
+        li {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>
+            <a href="javascript:;">我是a标签</a>
+        </li>
+
+    </ul>
+</body>
+<script>
+    var ul = document.querySelector('ul');
+    var mya = document.querySelector('a');
+    ul.onclick = function (e) {
+        console.log('ul被点击了...');
+    };
+    mya.onclick = function (e) {
+        console.log('a被点击了...');
+        e.stopPropagation();
+    };
+</script>
+</body>
+
+</html>

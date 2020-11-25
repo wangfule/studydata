@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+body {
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    height: 1000px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    max-width: 640px;
+    min-width: 320px;
+    background-color: #1D2A68;
+}
+
+.menu {
+    width: 50px;
+    display: flex;
+    /* background-color: red; */
+}
+
+.menu a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu span {
+    width: 20px;
+    height: 16px;
+    background: url(../images/s-btn.png) no-repeat;
+    background-size: 20px;
+}
+
+
+.login {
+    width: 50px;
+    /* background-color: green; */
+}
+
+.login {
+    text-align: center;
+    line-height: 44px;
+}
+
+.login a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.search {
+    flex: 1;
+    display: flex;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: #fff;
+    align-items: center;
+}
+
+.search i {
+    display: block;
+    width: 20px;
+    height: 16px;
+    margin: 0 5px;
+    background: url(../images/jd-sprites.png) no-repeat;
+    background-size: 200px;
+}
+
+.search input {
+    flex: 1;
+    height: 20px;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+}
+
+
+.banner {
+    display: flex;
+}
+
+.banner a {
+    flex: 1;
+}
+
+.banner a img {
+    width: 100%;
+}
+
+.jiadian {
+    display: flex;
+}
+
+.jiadian a {
+    flex: 1;
+}
+
+.jiadian img {
+    width: 100%;
+}
+
+/* 导航栏 */
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav ul li {
+    display: flex;
+    flex: 20%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.nav ul li a span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../upload/nav1.webp);
+    background-size: 40px;
+    margin: 0 auto;
+
+}
+
+.nav ul li a p {
+    margin-top: 5px;
+}
+
+.news {
+    display: flex;
+}
+
+.news a:first-child {
+    flex: 2;
+}
+
+.news a:nth-child(2),
+.news a:nth-child(3) {
+    flex: 1;
+    border-left: 1px solid #ccc;
+}
+
+.news img {
+    width: 100%;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- 
+        创建一个电脑对象，该对象要有颜色、重量、品牌、型号，可以看电影、听音乐、打游戏和敲代码。
+
+       属性 ：颜色、重量、品牌、型号；
+       方法：看电影、听音乐、打游戏、敲代码，
+       在调用方法时打印 “我在看电影/听音乐/打游戏/敲代码”
+
+     -->
+
+    <script>
+        var computer = {
+            color: "黑色",
+            weight: 5,
+            brand: "联想",
+            model: "e470",
+
+
+            introduce: function () {
+                console.log("我是" + computer.color + "的，有" + computer.weight + "斤重,人家都叫我" + this.brand + " " +
+                    this.model);
+            },
+
+            seeMovie: function () {
+                console.log("我在看电影");
+            },
+
+            listenMusic: function () {
+                console.log("我在听音乐");
+            },
+
+            playGames: function () {
+                console.log("我在打游戏");
+            }
+
+        }
+
+        console.log(computer.color);
+        console.log(computer.weight);
+        console.log(computer.brand);
+        computer.introduce();
+
+        computer.seeMovie();
+        computer.listenMusic();
+    </script>
+
+</body>
+
+</html>

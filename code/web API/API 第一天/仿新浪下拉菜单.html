@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .wb {
+            width: 100px;
+
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .wb_hd {
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .wb_bd {
+            display: none;
+        }
+
+        .wb_bd li {
+            border: 1px solid orange;
+            border-top: none;
+            padding: 10px 0;
+        }
+
+        .over {
+            color: orange;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wb">
+        <div class="wb_hd">微博</div>
+        <ul class="wb_bd">
+            <li>私信</li>
+            <li>评论</li>
+            <li>@我</li>
+        </ul>
+    </div>
+
+
+
+    <script>
+        var wb = document.querySelector('.wb');
+        // console.log(wb);
+        var wb_hd = document.querySelector('.wb_hd')
+        var ul = document.querySelector('.wb_bd');
+        var lis = ul.querySelectorAll('li');
+        console.log(lis);
+
+        wb.onmouseover = function () {
+            // this.className = 'wb over'
+            ul.style.display = "block"
+        }
+        wb.onmouseout = function () {
+            // this.className = 'wb_hd'
+            ul.style.display = "none"
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

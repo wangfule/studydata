@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            background-color: #333;
+        }
+        div{
+            width: 620px;
+            margin: 100px auto;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+        li{
+            float: left;
+            margin-left: 5px;
+            /* margin-top: 5px; */
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <ul>
+            <li><img src="./images/01.jpg" alt=""></li>
+            <li><img src="./images/02.jpg" alt=""></li>
+            <li><img src="./images/03.jpg" alt=""></li>
+            <li><img src="./images/04.jpg" alt=""></li>
+            <li><img src="./images/05.jpg" alt=""></li>
+            <li><img src="./images/06.jpg" alt=""></li>
+        </ul>
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+
+    <script>
+
+        $(function(){
+
+            // $('div li').mouseover(function(){
+            //     // console.log($(this).siblings());
+            //     $(this).siblings().css('opacity',.5);
+            // }) 
+            // $('div li').mouseout(function(){
+            //     // console.log($(this).siblings());
+            //     $('div li').css('opacity',1);
+            // })
+
+
+            $('div li').hover(function(){
+                $(this).siblings().stop().fadeTo(100,.5)
+            },function(){
+                $('div li').stop().fadeTo(100,1)
+            })
+
+        })
+
+    </script>
+</body>
+</html>

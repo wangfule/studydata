@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        ul {
+            width: 200px;
+            height: 400px;
+            display: flex;
+            /*center 居中 */
+            /* flex-end 最后显示，也就是靠右 */
+            /* flex-start 开始，最左 */
+            /* space-around 平均分所有子元素 */
+            /* space-between 前后靠左和靠右，剩余中间平均分 */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        li {
+            width: 50px;
+            height: 38px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>1
+            <div>11</div>
+        </li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+
+</html>

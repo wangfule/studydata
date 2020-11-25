@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            border: 1px solid #ccc;
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin: 100px auto;
+        }
+
+        thead th {
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+        }
+
+        thead th:nth-child(2) {
+            padding: 10px 70px;
+        }
+
+        tr {
+            border: 1px solid #ccc;
+
+        }
+
+        tbody td {
+            text-align: center;
+            padding: 5px 0;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" id="j_cbAll">
+                </th>
+                <th>商品</th>
+                <th>价格</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>iphone 12pro</td>
+                <td>9989</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>iphone 12pro</td>
+                <td>9989</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>iphone 12pro</td>
+                <td>9989</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>iphone 12pro</td>
+                <td>9989</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <script>
+        var quan = document.getElementById('j_cbAll');
+        var dan = document.querySelector('tbody').querySelectorAll('input');
+        // console.dir(document.querySelectorAll('tr')[0]);
+        console.log(quan.checked);
+        quan.onclick = function () {
+            if (quan.checked == true) {
+                for (var i = 0; i < dan.length; i++) {
+                    dan[i].checked = true;
+                }
+            }
+        }
+
+        for (var i = 0; i < dan.length; i++) {
+
+            dan[i].onclick = function () {
+                for (var i = 0; i < dan.length; i++) {
+                    if (dan[i].checked == false) {
+                        quan.checked = false
+                        break;
+                    }
+                    quan.checked = true
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

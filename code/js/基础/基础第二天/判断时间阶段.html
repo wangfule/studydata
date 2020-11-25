@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+        用户输入几点弹出问候信息；
+
+            如用户输入12点中午好；
+
+            用户输入18点 弹出傍晚好；
+
+            用户输入23点弹出深夜好
+    -->
+
+
+    <script>
+        var time = prompt("现在几点了：");
+
+        if (time <= 12 && time >= 7) {
+            alert("中午好啊");
+        } else if (time <= 18 && time > 12) {
+            alert("下午好");
+        } else if (time <= 24 && time > 18 || time >= 0 && time < 7) {
+            alert("晚上好");
+        } else {
+            alert("有这个时间吗")
+        }
+    </script>
+
+</body>
+
+</html>

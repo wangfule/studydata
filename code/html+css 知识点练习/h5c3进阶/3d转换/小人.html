@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .body {
+            perspective: 100000px;
+
+        }
+
+        .box {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 300px auto;
+        }
+
+        .ren {
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: zhuan 5s infinite linear;
+            width: 184px;
+            height: 325px;
+            transform-style: preserve-3d;
+            transform: rotateX(-20deg);
+            z-index: 1;
+        }
+
+
+        @keyframes zhuan {
+            0% {}
+
+            100% {
+                transform: rotateX(-20deg) rotateY(360deg)
+            }
+        }
+
+        .ren li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 184px;
+            height: 325px;
+            background-image: url(images/9.png);
+            animation: run 1s steps(8) infinite;
+
+        }
+
+        .ren li:last-child {
+            transform: translateZ(300px);
+        }
+
+        .ren li:nth-child(4) {
+            transform: rotateY(180deg) translateZ(300px);
+        }
+
+        .ren li:nth-child(2) {
+            transform: rotateY(60deg) translateZ(300px);
+        }
+
+        .ren li:nth-child(3) {
+            transform: rotateY(-120deg) translateZ(300px);
+        }
+
+        .ren li:nth-child(1) {
+            transform: rotateY(-60deg) translateZ(300px);
+        }
+
+        .ren li:nth-child(5) {
+            transform: rotateY(120deg) translateZ(300px);
+        }
+
+        @keyframes run {
+            0% {}
+
+            100% {
+                background-position: -1472px 0;
+            }
+        }
+
+
+
+        .xiong {
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: zhuan1 5s infinite linear;
+            width: 200px;
+            height: 100px;
+            transform-style: preserve-3d;
+            transform: rotateX(-20deg);
+        }
+
+        @keyframes zhuan1 {
+            0% {}
+
+            100% {
+                transform: rotateX(-20deg) rotateY(-360deg)
+            }
+        }
+
+        .xiong li {
+            position: absolute;
+            top: 200px;
+            left: 0;
+            width: 200px;
+            height: 100px;
+            background-image: url(images/bear.png);
+            background-color: #ccc;
+            animation: run1 1s steps(8) infinite;
+
+        }
+
+        @keyframes run1 {
+            0% {}
+
+            100% {
+                background-position: -1600px 0;
+            }
+        }
+
+
+        .xiong li:last-child {
+            transform: translateZ(600px);
+        }
+
+        .xiong li:nth-child(4) {
+            transform: rotateY(180deg) translateZ(600px);
+        }
+
+        .xiong li:nth-child(2) {
+            transform: rotateY(60deg) translateZ(600px);
+        }
+
+        .xiong li:nth-child(3) {
+            transform: rotateY(-120deg) translateZ(600px);
+        }
+
+        .xiong li:nth-child(1) {
+            transform: rotateY(-60deg) translateZ(600px);
+        }
+
+        .xiong li:nth-child(5) {
+            transform: rotateY(120deg) translateZ(600px);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <div class="box">
+        <div class="ren">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="xiong">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

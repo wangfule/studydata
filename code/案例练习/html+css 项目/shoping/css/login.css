@@ -1,0 +1,188 @@
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    margin: 17px 0 12px;
+}
+
+header .logo a {
+    display: block;
+    width: 175px;
+    height: 56px;
+}
+
+/* 登录，中心板块 */
+
+.login {
+    background-color: #7d02fe;
+    height: 486px;
+}
+
+.login .wrapper {
+    height: 100%;
+    background: url(../upload/loginbg.png) no-repeat center;
+}
+
+.login_content {
+    float: right;
+    margin-top: 62px;
+    padding: 23px 37px 0;
+    width: 306px;
+    height: 362px;
+    background-color: #fff;
+}
+
+.login_hd a {
+    display: block;
+    width: 127px;
+    height: 22px;
+    padding: 0 12px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.login_hd a:first-child {
+    float: left;
+    border-right: 1px solid #ccc;
+}
+
+.login_hd a:last-child {
+    float: right;
+    text-align: right;
+    color: #ce171c;
+}
+
+.login_bd {
+    margin-top: 20px;
+}
+
+.login_bd .tixing {
+    height: 24px;
+    padding-left: 10px;
+    background-color: #fbfbec;
+    border: 1px solid #f4f1cd;
+    line-height: 24px;
+    color: #67665d;
+    margin-bottom: 10px;
+}
+
+.login_bd .inp {
+    width: 304px;
+    margin-bottom: 17px;
+}
+
+
+.login_bd .inp input {
+    width: 256px;
+    height: 34px;
+    padding-left: 48px;
+    border: 1px solid #bababa;
+}
+
+.login_bd .inp input:focus {
+    border-color: #3ca1e4;
+}
+
+.login_bd .inp .user {
+    background: url(../images/user.png) no-repeat left top;
+
+}
+
+.login_bd .inp .pwd {
+    background: url(../images/psd.png) no-repeat left center;
+}
+
+.login_bd .forget_pwd {
+    height: 14px;
+}
+
+.login_bd .forget_pwd input {
+    /* float: left; */
+    vertical-align: middle;
+    margin-right: 6px;
+
+}
+
+.login_bd .forget_pwd a {
+    float: right;
+    line-height: 14px;
+}
+
+.login_bd .btn {
+    margin-top: 20px;
+}
+
+.login_bd .btn input {
+    width: 306px;
+    height: 41px;
+    background-color: #c81822;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login_bd .link {
+    margin-top: 32px;
+}
+
+.login_bd .friendlink {
+    float: left;
+}
+
+.login_bd .friendlink a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 18px;
+}
+
+.login_bd .friendlink a:nth-child(1) {
+    background: url(../images/regetype.png) no-repeat -19px -8px;
+}
+
+.login_bd .friendlink a:nth-child(2) {
+    background: url(../images/regetype.png) no-repeat -71px -8px;
+}
+
+.login_bd .friendlink a:nth-child(3) {
+    background: url(../images/regetype.png) no-repeat -123px -8px;
+}
+
+.login_bd .friendlink a:nth-child(4) {
+    background: url(../images/regetype.png) no-repeat -175px -8px;
+}
+
+.login_bd .register {
+    float: right;
+}
+
+.login_bd .register a {
+    color: #0e6fac;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+/* 脚部 */
+
+footer {
+    height: 120px;
+}
+
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.links {
+    margin-bottom: 15px;
+}
+
+.links a {
+    margin: 0 3px;
+}
+
+.copyright {
+    line-height: 20px;
+}

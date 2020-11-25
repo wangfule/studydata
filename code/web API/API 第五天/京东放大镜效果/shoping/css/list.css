@@ -1,0 +1,79 @@
+/* 秒杀 */
+.sk {
+    position: absolute;
+    top: 40px;
+    left: 186px;
+    padding: 3px 0 3px 14px;
+    border-left: 2px solid #b21a1c;
+}
+
+/* 导航栏 */
+
+.nav .sk_list {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+}
+
+.nav .sk_list li {
+    float: left;
+    padding: 0 28px;
+}
+
+.nav .sk_list li a {
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+}
+
+.nav .sk_con {
+    float: right;
+    height: 45px;
+    line-height: 45px;
+}
+
+.nav .sk_con li {
+    float: left;
+    padding: 0 23px;
+}
+
+.nav .sk_con li:last-child::after {
+    content: "\e91e";
+    font-family: "icomoon";
+}
+
+/* 主体头部 */
+
+.sk_container .sk_hd {
+    height: 120px;
+}
+
+.sk_container .sk_hd img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 主体内容 */
+.sk_container .sk_bd {
+    margin-top: 25px;
+}
+
+.sk_container .sk_bd li {
+    float: left;
+    margin-right: 10px;
+    border: 1px solid transparent;
+}
+
+.sk_container .sk_bd li:hover {
+    border-color: #b11a1a;
+}
+
+.sk_container .sk_bd li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.sk_container .sk_bd li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

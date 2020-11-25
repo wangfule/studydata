@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .nav {
+            height: 485px;
+        }
+
+        .nav ul {
+            height: 440px;
+            width: 234px;
+            background-color: #8b898b;
+            padding-top: 20px;
+            float: left;
+
+        }
+
+        .nav li {
+            height: 42px;
+            padding-left: 30px;
+            padding-right: 24px;
+        }
+
+        .nav li:hover {
+            background-color: #ff6700;
+        }
+
+        .nav li a {
+            color: #fff;
+            float: left;
+            line-height: 42px;
+        }
+
+        .nav li p {
+            color: #fff;
+            float: right;
+            line-height: 42px;
+            font-weight: 700;
+        }
+
+        .nav div {
+            float: left;
+            height: 460px;
+            width: 600px;
+            display: none;
+            font-size: 100px;
+            font-weight: 700px;
+            text-align: center;
+            line-height: 460px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: blue;
+        }
+    </style>
+    <script>
+        function chuxian(x) {
+            if (x == 1) {
+                document.getElementById('a1').style.display = "block";
+            }
+            if (x == 2) {
+                document.getElementById('a2').style.display = "block";
+            }
+            if (x == 3) {
+                document.getElementById('a3').style.display = "block";
+            }
+        }
+
+        function xiaoshi(x) {
+            if (x == 1) {
+                document.getElementById('a1').style.display = "none";
+            }
+            if (x == 2) {
+                document.getElementById('a2').style.display = "none";
+            }
+            if (x == 3) {
+                document.getElementById('a3').style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li onmouseover="chuxian(1)" onmouseout="xiaoshi(1)">
+                <a id="aa" href="#">手机 电话卡</a>
+                <p>&gt;</p>
+            </li>
+            <li onmouseover="chuxian(3)" onmouseout="xiaoshi(3)">
+                <a href="#">手机 电话卡</a>
+                <p>&gt;</p>
+            </li>
+            <li onmouseover="chuxian(2)" onmouseout="xiaoshi(2)">
+                <a href="#">手机 电话卡</a>
+                <p>&gt;</p>
+            </li>
+            <li onmouseover="chuxian(1)" onmouseout="xiaoshi(1)">
+                <a href="#">手机 电话卡</a>
+                <p>&gt;</p>
+            </li>
+            <li onmouseover="chuxian(3)" onmouseout="xiaoshi(3)">
+                <a href="#">手机 电话卡</a>
+                <p>&gt;</p>
+            </li>
+            <li onmouseover="chuxian(2)" onmouseout="xiaoshi(2)">
+                <a href="#">手机 电话卡</a>
+                <p>&gt;</p>
+            </li>
+            <li onmouseover="chuxian(1)" onmouseout="xiaoshi(1)">
+                <a href="#">手机 电话卡</a>
+                <p>&gt;</p>
+            </li>
+            <li onmouseover="chuxian(3)" onmouseout="xiaoshi(3)">
+                <a href="#">手机 电话卡</a>
+                <p>&gt;</p>
+            </li>
+            <li onmouseover="chuxian(2)" onmouseout="xiaoshi(2)">
+                <a href="#">手机 电话卡</a>
+                <p>&gt;</p>
+            </li>
+            <li onmouseover="chuxian(1)" onmouseout="xiaoshi(1)">
+                <a href="#">手机 电话卡</a>
+                <p>&gt;</p>
+            </li>
+        </ul>
+        <div class="red" id="a1" onmouseover="chuxian(1)" onmouseout="xiaoshi(1)">1</div>
+        <div class="green" id="a2" onmouseover="chuxian(2)" onmouseout="xiaoshi(2)">2</div>
+        <div class="yellow" id="a3" onmouseover="chuxian(3)" onmouseout="xiaoshi(3)">3</div>
+    </div>
+</body>
+
+</html>

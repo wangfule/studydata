@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+
+        }
+
+        body {
+            perspective: 100000px;
+        }
+
+        ul {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 200px auto;
+            transform-style: preserve-3d;
+            background-image: url(images/dog.jpg);
+            animation: zhuan 5s infinite linear;
+            transform: rotateX(-20deg);
+        }
+
+        @keyframes zhuan {
+            0% {}
+
+            100% {
+                transform: rotateX(-20deg) rotateY(360deg)
+            }
+        }
+
+        li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 200px;
+            background: url(images/dog.jpg);
+            color: chartreuse;
+        }
+
+        li:last-child {
+            transform: translateZ(300px);
+        }
+
+        li:nth-child(4) {
+            transform: rotateY(180deg) translateZ(300px);
+        }
+
+        li:nth-child(2) {
+            transform: rotateY(60deg) translateZ(300px);
+        }
+
+        li:nth-child(3) {
+            transform: rotateY(-120deg) translateZ(300px);
+        }
+
+        li:nth-child(1) {
+            transform: rotateY(-60deg) translateZ(300px);
+        }
+
+        li:nth-child(5) {
+            transform: rotateY(120deg) translateZ(300px);
+        }
+
+        ul:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+
+</html>

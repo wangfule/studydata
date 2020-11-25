@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+
+        分数转换,给一个分数，判定等级。
+        大于等于90  A，
+        大于等于80小于90  B，
+        大于等于70小于80  C ，
+        大于等于60小于70 D，
+        小于60 E
+
+
+     -->
+
+    <script>
+        var score = prompt("说，考了多少分：");
+        // console.log(parseInt(score / 10));
+
+
+        switch (parseInt(score / 10)) {
+
+            case 10:
+                alert("有点我当年的样子...")
+
+            case 9:
+                alert("还不错嘛，小可爱~");
+                break;
+            case 8:
+                alert("还可以~小子");
+                break;
+            case 7:
+                alert("小心点...孩子");
+                break;
+            default:
+                alert("请你吃拖鞋...张嘴");
+        }
+
+
+
+
+
+
+        // switch (true) {
+        //     case score >= 90:
+        //         alert("还不错嘛，小子~");
+        //         break;
+        //     case score >= 80:
+        //         alert("还可以~");
+        //         break;
+        //     case score >= 70:
+        //         alert("小心点...");
+        //         break;
+        //     default:
+        //         alert("请你吃拖鞋...");
+
+        // }
+    </script>
+</body>
+
+</html>

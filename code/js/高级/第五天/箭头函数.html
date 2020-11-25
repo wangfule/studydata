@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let fn = function () {
+            return 10;
+        }
+
+        // 函数内只有一行代码,可以省略{}和return
+
+
+        //没有参数不能省略括号
+        let fn1 = () => 10
+        console.log(fn1());
+
+        // 只有一个参数可以省略括号
+        let fn2 = a => a + 10
+        console.log(fn2(5));
+
+        // 两个参数的时候不能省略括号
+        let fn3 = (a, b) => a + b
+        console.log(fn3(10, 20));
+
+    </script>
+
+
+</body>
+
+</html>

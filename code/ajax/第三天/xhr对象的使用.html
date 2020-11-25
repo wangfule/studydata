@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // 创建xhr对象
+        var xhr = new XMLHttpRequest();
+        console.log(xhr.readyState);  //创建了xhr对象
+        // 调用open方法
+        xhr.open('GET', 'http://www.liulongbin.top:3006/api/cmtlist');
+        console.log(xhr.readyState);   //调用了open
+
+        // 调用send方法
+        xhr.send();
+        console.log(xhr.readyState);   //调用了open
+
+        // 监听
+        xhr.onreadystatechange = function () {
+            console.log(xhr.readyState);
+
+
+            // readyState === 4数据返回成功了  xhr.status === 200联网状态
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

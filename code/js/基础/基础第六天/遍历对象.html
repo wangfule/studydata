@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+
+        和数组不一样，用的for ... in ...
+     -->
+
+
+    <script>
+        var obj = {
+            name: "aaa",
+            sex: "女",
+            sing: function () {
+                console.log("我会唱歌");
+            }
+        }
+
+        for (k in obj) {
+            console.log(k);
+            console.log(obj[k]);
+        }
+    </script>
+
+</body>
+
+</html>

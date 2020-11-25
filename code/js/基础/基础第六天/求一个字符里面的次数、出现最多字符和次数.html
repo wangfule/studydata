@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+        求一份字符串中，每一个字符出现的次数
+                       次数出现的最多的字符
+                       最大的次数是多少次
+     -->
+
+    <script>
+        var str = "sadjajilkwjdianksdjaljsjjkkkkkklssasdlkaiwjdakl"
+
+        // 定义一个对象，用来存储里面每个字符和出现的次数
+
+        var obj = {}
+
+        // 用for循环  循环次数是字符串长度  用charAt()便利出字符串里面的每个字符
+
+        for (var i = 0; i < str.length; i++) {
+            var s = str.charAt(i);
+            // console.log(s);
+            // 判断对象里面有没有当前的字符，如果有+1 没有的话是undefined 也就是false，就创建一个赋值
+            if (obj[s]) {
+                obj[s]++
+            } else {
+                obj[s] = 1;
+            }
+        }
+
+        var maxNum = 0;
+        var maxStr = "";
+        for (k in obj) {
+            console.log(k + "出现的次数为" + obj[k]);
+            if (obj[k] > maxNum) {
+                maxStr = k;
+                maxNum = obj[k];
+            }
+        }
+        console.log('出现最多的字符是' + maxStr);
+        console.log('最多字符出现的次数是' + maxNum);
+
+
+
+        // 遍历对象，判断属性值大小，找出最大的次数，同时将把最多属性给赋值出来
+    </script>
+
+
+
+</body>
+
+</html>

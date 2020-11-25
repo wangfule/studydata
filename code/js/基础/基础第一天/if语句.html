@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var a = Math.round(Math.random() * 100);
+        console.log(a);
+        var num = prompt("来猜一猜这个小于100的数是几吧\n我猜你肯定猜不到：")
+        var i;
+        for (i = 1; i > 0; i++) {
+            if (num == a) {
+                alert("对了");
+
+                if (i < 10) {
+                    alert(i + "次就猜对了，挺厉害的嘛你")
+                } else if (i < 20) {
+                    alert("才" + i + "次猜对了，还算厉害的嘛你");
+
+                } else {
+                    alert(i + "次才猜对了，不行啊你")
+
+                }
+                break;
+            } else if (num < a) {
+                num = prompt("小了，再输入一次：")
+            } else if (num > a) {
+                num = prompt("大了，再输入一次：")
+            } else {
+                num = prompt("是数字哦，看清了：")
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

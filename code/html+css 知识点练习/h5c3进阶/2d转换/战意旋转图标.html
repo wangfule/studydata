@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big_box {
+            height: 4140px;
+            background: url(images/bg_81ab3d6.jpg) no-repeat center;
+        }
+
+        .big_box div {
+            position: absolute;
+            top: 200px;
+            right: 500px;
+
+        }
+
+        .big_box div::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 64px;
+            height: 64px;
+            transform: translate(15px, 15px);
+            background: url(images/index_z_9769688.png) no-repeat -1002px -670px;
+        }
+
+        .big_box div::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 93px;
+            height: 93px;
+            content: "";
+
+            background: url(images/index_z_9769688.png) no-repeat -744px -819px;
+            animation: zhuanquan 2s infinite linear;
+            /* transform-origin: 32px 32px; */
+        }
+
+        .big_box div:hover::after {
+            animation-play-state: paused;
+        }
+
+        @keyframes zhuanquan {
+            0% {}
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big_box">
+        <div></div>
+    </div>
+</body>
+
+</html>

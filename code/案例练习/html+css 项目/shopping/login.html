@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        header {
+            width: 1200px;
+            height: 63px;
+            margin: 20px auto;
+            border-bottom: 2px solid #de0000;
+        }
+
+        .content {
+            height: 520px;
+            border: 1px solid #cccccc;
+        }
+
+        .content .title {
+            height: 41px;
+            line-height: 41px;
+            background-color: #ececec;
+            border-bottom: 1px solid #ccc;
+            padding: 0 10px;
+            color: #666;
+        }
+
+        .content .title h1 {
+            float: left;
+            font-size: 16px;
+            font-weight: 400;
+
+        }
+
+        .content .title p {
+            float: right;
+            font-size: 14px;
+
+        }
+
+        .content .title p a {
+            font-size: 14px;
+            color: #de0000;
+        }
+
+        .content .xinxi {
+            width: 530px;
+            height: 370px;
+            margin: 50px auto;
+        }
+
+        .content .xinxi li {
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .content .xinxi li label {
+            display: inline-block;
+            width: 70px;
+            text-align: right;
+            font-size: 12px;
+        }
+
+        .content .xinxi li input {
+            width: 230px;
+            padding-left: 10px;
+            height: 35px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .content .xinxi li:nth-child(2n+1) span {
+            font-size: 12px;
+            color: #de0000;
+        }
+
+        .content .xinxi li:nth-child(2) span {
+            font-size: 12px;
+            color: #00821a;
+        }
+
+        .content .xinxi li span::before {
+            display: inline-block;
+            content: "";
+            height: 20px;
+            width: 20px;
+            vertical-align: middle;
+        }
+
+        .content .xinxi li:nth-child(2) span::before {
+            background: url(images/success.png) no-repeat center;
+        }
+
+        .content .xinxi li:nth-child(2n+1) span::before {
+            background: url(images/error.png) no-repeat center;
+        }
+
+        .content .xinxi .safe {
+            padding-left: 155px;
+        }
+
+        .content .xinxi .safe i {
+            display: inline-block;
+            height: 16px;
+            line-height: 16px;
+            width: 36px;
+            margin-left: 3px;
+            font-size: 12px;
+            font-style: normal;
+            text-align: center;
+            color: #fff;
+        }
+
+        .content .xinxi .safe i:nth-child(1) {
+            background-color: #f70000;
+        }
+
+        .content .xinxi .safe i:nth-child(2) {
+            background-color: #00bb4b;
+        }
+
+        .content .xinxi .safe i:nth-child(3) {
+            background-color: #ff8b00;
+        }
+
+        .content .xinxi .xieyi {
+            padding-left: 80px;
+            font-size: 12px;
+        }
+
+        .content .xinxi .xieyi input {
+            height: 13px;
+            width: 13px;
+            vertical-align: middle;
+        }
+
+        .content .xinxi .xieyi a {
+            color: #00a4e7;
+        }
+
+        .content .xinxi .btn {
+            padding-left: 56px;
+
+        }
+
+        .content .xinxi .btn input {
+            margin-bottom: 0;
+            width: 200px;
+            height: 34px;
+            background-color: #de0000;
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            line-height: 34px;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        footer p {
+            margin-top: 20px;
+            color: #666;
+            font-size: 12px;
+        }
+
+        footer a {
+            color: #666;
+            font-size: 12px;
+        }
+
+        footer a:hover {
+            color: #de0000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="">
+        </a>
+    </header>
+
+    <div class="content version">
+        <div class="title">
+            <h1>注册新用户</h1>
+            <p>
+                我有账号，去<a href="index.html">登录</a>
+            </p>
+        </div>
+        <ul class="xinxi">
+            <li>
+                <label for="">手机号:</label>
+                <input type="text" autofocus>
+                <span>手机号码格式不正确，请重新输入</span>
+            </li>
+            <li>
+                <label for="">短信验证码:</label>
+                <input type="text">
+                <span>短信输入正确</span>
+            </li>
+            <li>
+                <label for="">登录密码:</label>
+                <input type="password">
+                <span>手机号码格式不正确，请重新输入</span>
+            </li>
+            <li class="safe">
+                安全程度<i>弱</i><i>中</i><i>强</i>
+            </li>
+            <li>
+                <label for="">确认密码:</label>
+                <input type="password">
+                <span>手机号码格式不正确，请重新输入</span>
+            </li>
+            <li class="xieyi">
+                <input type="checkbox" checked>
+                同意协议并注册
+                <a href="#">《知晓用户协议》</a>
+            </li>
+            <li class="btn">
+                <input type="submit" value="完成注册">
+            </li>
+        </ul>
+    </div>
+    <footer class="version">
+        <a href="#">关于我们</a> | <a href="#">联系我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a>
+        | <a href="#">关于我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a> |
+        品优购公益 | English Site | Contact U
+        <p>地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn <br>
+            京ICP备08001421号京公网安备110108007702</p>
+    </footer>
+</body>
+
+</html>
