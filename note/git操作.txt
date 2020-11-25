@@ -1,0 +1,153 @@
+
+Git的终极目标:让工作区中的文件都处于"未修改"的状态
+
+配置用户名和邮箱 (一次配置,之后就不用再配置了,需要修改再设置一遍就可以了)
+
+	git config --global user.name "wangfule"
+	git config --global user.emali ""
+
+          ***C:/Users/用户名文件夹/.gitconfig  里面存了git的全局配置
+
+查看所有的全局配置  
+
+	git config --list --global
+
+本地git仓库设置 
+
+	先找到指定的文件夹,在文件夹里面打开,然后运行 git init
+	这个目录就会变成git仓库
+
+查看文件的状态
+
+	git status     ( 精简模式: git status -s )	
+	没有跟踪的文件在精简模式下前面会加上2个??
+
+跟踪新的文件,将修改的问价加入缓存区
+
+	git add 文件名
+	git add .   (跟踪和加入所有工作区文件)
+	跟踪后的文件会变成绿色
+
+提交更新 将跟踪放在缓存区的文件放入仓库
+
+	git commit -m "本次更新内容说明"
+	提交成功后,会提示nothing to commit ,work tree clean
+
+撤销文件的修改 (用仓库中存储的版本直接覆盖现在工作区或缓存区的版本)
+
+	git checkout -- 文件名    ( 危险性比较高,一旦覆盖后没办法再找回 )
+
+取消暂存的文件,移到工作区
+
+	git reset HEAD 文件名称
+
+跳过暂存区直接更新到仓库( 必须是已经跟踪过的文件 )
+
+	git commit -a -m  "本次更新说明"
+
+移出文件(两种情况)
+	
+	( 1 )从仓库中和工作区同时移出对应的文件
+		git rm -f  文件名
+	( 2 )从git仓库中移出 文件,但保留工作区中的文件
+		git rm --cached 文件名
+
+忽略文件
+	
+	创建一个名为.gitignore的配置文件,格式:
+		① 以 # 开头的是注释
+		② 以 / 结尾的是目录
+		③ 以 / 开头防止递归
+		④ 以 ! 开头表示取反
+		⑤ 可以使用 glob 模式进行文件和文件夹的匹配（glob 指简化了的正则表达式）
+			星号 * 匹配零个或多个任意字符
+			[abc] 匹配任何一个列在方括号中的字符 
+			问号 ? 只匹配一个任意字符
+			两个星号 ** 表示匹配任意中间目录
+			在方括号中使用短划线分隔两个字符， 表示所有在这两个字符范围内的都可以匹配
+
+查看提交历史
+
+	git log 查看所有的提交历史,最近提交在最上面
+	git log -2  只展示最新的两条提交历史
+
+回退到指定的版本
+
+	git reset --hard 提交版本id名
+
+在旧版本中查看操作历史
+
+	git reflog 
+	git reflog --pretty=oneline
+
+ 配置SSH key
+
+	( 1 )Git中运行  ssh-keygen -t rsa -b 4096 -C "18790697886@163.com
+	      连续敲击3次回车,然后在C:\Users\用户名文件夹\.ssh 目录中生成 id_rsa 和 id_rsa.pub 两个文件
+
+	( 2 )打开 id_rsa.pub 文件,Github中点击头像 -> Settings -> SSH and GPG Keys -> New SSH key
+	      将 id_rsa.pub 文件中的内容，粘贴到 Key 对应的文本框中  Title中任意设置
+
+	( 3 )ssh -T git@github.com输入后,会弹出一长串 然后yes之后会看到提示信息     Hi ,用户名!****
+
+将远程仓库克隆到本地
+
+	git clone 远程仓库的地址
+
+查看分支列表 
+	
+	git branch
+
+创建新分支
+
+	git branch 分支名称
+
+切换分支
+
+	git checkout 分支名
+	***切换前要先确定目前的状态是nothing 
+
+分支快速创建并切换
+
+	git checkout -b 分支名
+
+合并分支
+
+	git merge 分支名
+	***注意,要先切换到主分支上,后面跟的是其他分支的名字
+
+删除分支
+
+	git branch -d 分支名称    ( 删除的是合并后的分支 )
+	git branch -D 分支名称    ( 没有合并的分支也可以删除 )
+
+遇到冲突时的分支合并
+
+	vscode打开包含冲突的文件，手动解决之后,然后:
+	git add .
+	git commit -m "解决了分支合并冲突的问题"
+
+把本地分支推送到远程仓库
+	
+	git push -u 远程仓库的别名 本地分支名称:远程分支名称
+	git push -u origin payment:pay
+	如果本地分支和远程分支名字一样的话,冒号后面就可以忽略
+	git push -u origin payment
+
+查看远程分支列表
+
+	git remote show 远程仓库名字 ( origin 在本地和远程关联时自己设置的一个名字 ) 
+
+跟踪分支( 把远程分支下载到本地 )
+
+	git checkout -b 本地分支名称 远程仓库名称/远程分支名称
+
+拉取远程分支的最新代码
+
+	git pull
+
+删除远程分支
+	
+	gir push 远程仓库名 --delete 远程分支名称
+
+	

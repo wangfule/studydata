@@ -1,0 +1,95 @@
+
+
+※※※ BOM总结
+
+  1、获取元素对象   5种方法   2种是对象  3种是伪数组    2种没有兼容   3种有兼容性
+		
+	（1）document.getElementByTagName('div');   传统标签名  伪数组  没有兼容性问题
+
+	（2）document.getElementByClassName('');      传统类名     伪数组  有兼容性问题
+
+	（3）document.getElementById('')                    传统ID名     对象     没有兼容性
+
+	（4）document.querySelector('')(类名加. id加#）新方法         对象    有兼容性
+
+	（5）document.querySelectorAll('')                    新方法         伪数组    有兼容性
+
+        2、事件三要素：   事件对象   事件类型  事件处理函数   缺一不可
+
+        3、修改文本内容  innerHTML识别标签      innerText不能识别
+
+        4、修改属性：   注意的点是 class  用来修改的时候 要用 className
+
+        5、排他思想     干掉所有人 留下我自己    百度皮肤  tab栏切换(重)   全选和反选(重)
+
+        6、自定义属性   
+
+	  （1）元素对象.属性名 = 值    获取就要用：元素对象.属性名
+
+                  （2）元素对象.setAttribute(第一个是属性名,第二个是属性值)   元素对象.getAttribute(属性名)
+
+                  （3）data-     获取dataset
+
+        7、节点操作  --  节操
+
+                  （1）父元素节点   parentNode   亲爹
+
+                  （2）子元素节点   children亲儿子  所有的子元素节点 在一个伪数组里
+
+                  （3）兄弟元素节点  previousElementSibling  上一个兄弟节点  nextElementSibling  下一个兄弟节点
+
+                  （4）第一个和最后一个节点  children[0]   children[.children.length-1]
+
+                  （5）创建节点   createElement('标签名')  元素对象    innerHTML创建
+
+                  （6）添加节点  append可以添加多个  appendChild只能添加一个
+
+                  （7）删除节点  removeChild  父类移除子类   remove 移除本身所有的内容  包括自己
+
+        8、注册事件的第二种情况  addEventListener('click',function(){},true)  第三个参数捕获或者冒泡
+
+        9、清除事件，  onclick= null     removeEventListener  怎么注册就怎么移除
+
+        10、阻止默认行为  return  false   e.preventDefalut()   returnValue
+
+        11、阻止冒泡   e.stopPropagation()
+
+        12、鼠标的坐标   screenX  screenY   clientX  clientY   pageX  pageY
+
+        13、键盘事件   keyup事件   keydown   keypress
+
+
+*************************
+
+※DOM总结
+
+       1、window下的事件  ---  
+        
+          	  onload 等页面中所有的元素加载完毕之后才执行
+
+            	  DOMContentLoaded 等页面中的DOM元素加载完毕之后就执行   只能用addEventListener 来注册
+
+           	  onresize 来监测页面宽和高的变化的  只要变化了 就会触发这个事件
+
+        2、 setTimeout 在一定时间只执行一次     setInterval 在规定时间无限制去执行 
+
+           	 清除定时器的时候  clearTimeout   clearInterval  需要给定时器设置一个变量名
+
+
+        3、this指向：   
+
+          	  指向构造函数new出来的实例化对象的  (new 构造函数())
+
+            	事件里边的this指向的是  事件的注册对象(目前为止)
+	
+          	指向方法的调用者
+
+        4、window下的三个对象  
+
+
+            location对象 获取的是 浏览器url的地址  href(得到的整个url的地址)  search(接收的是传递过来的数据)
+
+            navigator对象   用来获取浏览器的信息的  移动端显示移动端页面  PC端显示PC端页面
+
+            history对象  forward()前进   back()后退   go()正数是前进   负数是后退
+
