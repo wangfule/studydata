@@ -1,0 +1,73 @@
+
+
+安装包
+
+	npm install 包名
+         	npm i 包名    (** install可以简写为i **)
+
+安装指定版本的包
+
+	npm install 包名@版本号    -->    npminstall moment@2.22.2
+
+初始化 (自动添加了package.json文件)
+
+	npm init -y   项目文件夹必须是英文
+
+安装所有的包 (package.json文件中记录的包)
+
+	npm install
+
+卸载包
+	
+	npm uninstall 包名  (** uninstall不能简写 **)
+
+安装到开发环境下的包
+
+	npm i 包名 -D  (** 只在开发期间用,上线期间不用的包 会存在devDependencies中 **)
+
+解决下包速度慢(切换成淘宝的下包镜像源)
+
+	***查看当前的下包镜像源
+	npm config get registry
+
+	***切换为淘宝下包镜像源
+	npm config set registry https://registry.npm.taobao.org
+
+使用nrm小工具便捷切换下包镜像源
+
+	***安装nrm
+	npm i nrm -g
+
+	***查看所有的镜像源
+	nrm ls
+
+	***切换下包镜像源
+	nrm use 需要的镜像名
+
+nrm解决报错问题
+
+	1.用管理员权限打开cmd或者powershell
+	2.set-ExecutionPolicy RemoteSigned    输入Y
+	3.get-ExecutionPolicy 
+	4.Set-ExecutionPolicy RemoteSigned -Scope Process    输入Y
+
+全局包
+	
+	***安装全局包
+	npm i 包名 -g
+	
+	***卸载全局包
+	npm uninstall 包名 -g
+
+
+发布包
+	
+	1.先切换到原版的镜像  nrm use npm 
+	2.在终端登录, npm login (** 一定要在包文件夹下 **)
+	3.运行 npm publish
+
+删除包
+
+	npm unpublish 包名 --force
+		1)只能删除发布72小时以内的包
+		2)删除后,24小时内不能重复发布删除的包
