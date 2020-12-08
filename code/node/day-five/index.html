@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btnGet">GET</button>
+    <button id="btnPost">POST</button>
+    <button id="btnJsonp">JSONP</button>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+
+<script>
+    $('#btnGet').on('click', function () {
+        $.ajax({
+            type: "GET",
+            url: "http://127.0.0.1:3000/index/get",
+            data: {
+                name: "zs",
+                age: 18
+            },
+            success: function (res) {
+                console.log(res);
+            }
+        })
+    })
+
+    let jd = {
+        name: "ww",
+        age: 18
+    }
+
+    $('#btnPost').on('click', function () {
+        $.ajax({
+            type: "post",
+            url: "http://127.0.0.1:3000/index/post",
+            data: JSON.stringify(jd),
+            // dataType: 'json',
+            contentType: "application/json",
+            success: function (res) {
+                console.log(res);
+            }
+        })
+    })
+
+
+    $('#btnJsonp').on('click', function () {
+        $.ajax({
+            type: "get",
+            url: "http://127.0.0.1:3000/index/jsonp",
+            dataType: "jsonp",
+            success: function (res) {
+                console.log(res);
+            }
+        })
+    })
+
+</script>
+
+</html>

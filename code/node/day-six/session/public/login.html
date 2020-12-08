@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="login">
+        <input type="text" name="username"><br />
+        <input type="text" name="password"><br />
+        <input type="submit" value="登录">
+    </form>
+
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+
+    <script>
+        $("#login").on("submit", function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: "http://127.0.0.1/login",
+                data: $(this).serialize(),
+                success: function (res) {
+                    // console.log(res);
+                    if (res.status != 0) return console.log(res.message);
+                    location.href = "./index.html"
+                    console.log(res.message);
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>

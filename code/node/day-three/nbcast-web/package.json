@@ -1,0 +1,12 @@
+{
+  "name": "nbcast-web",
+  "version": "1.0.0",
+  "description": "提供了格式化时间等等的还待开发的自助功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["nbcast-web'","dataFormat","web"],
+  "author": "",
+  "license": "ISC"
+}

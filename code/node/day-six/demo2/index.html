@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btnget">获取数据</button>
+    <div id="dv">
+    </div>
+
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+
+    <script>
+
+        $('#btnget').on('click', function () {
+            $.ajax({
+                url: "http://127.0.0.1:3000/api/getinfo/" + 7,
+                type: "GET",
+                success: function (res) {
+
+                    xr(res[0])
+                }
+            })
+        })
+
+        $('#dv').on('click', '#btnupdata', function () {
+            $.ajax({
+                type: 'POST',
+                url: "http://127.0.0.1:3000/api/updatainfo/" + $(this).attr('data-id'),
+                data: {
+                    username: 'sadaadwda',
+                    password: "232323wadwas"
+                },
+                success: function (res) {
+                    console.log(res);
+                    $('#btnget').click();
+                }
+            })
+        })
+
+        function xr(data) {
+            let str = `
+                    <span id="username" style="padding: 10px;">${data.username}</span>
+                    <span id="password" style="padding: 10px;">${data.password}</span>
+                    <button id="btnupdata" data-id='${data.id}'>修改数据</button>
+                    `
+            $("#dv").html(str)
+        }
+
+    </script>
+
+</body>
+
+</html>
