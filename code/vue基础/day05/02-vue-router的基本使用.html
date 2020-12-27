@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <router-link to="/user">User</router-link>
+        <router-link to="/login">Login</router-link>
+
+        <router-view></router-view>
+
+    </div>
+
+    <script src="./lib/vue_2.5.22.js"></script>
+    <script src="./lib/vue-router_3.0.2.js"></script>
+
+
+    <script>
+
+        // 定义组件
+        const user = {
+            template: '<h1>user</h1>'
+        }
+
+        const login = {
+            template: '<h1>login</h1>'
+        }
+
+        const router = new VueRouter({
+            routes: [
+                // 路由重定向 (打开默认页面)
+                { path: '/', redirect: '/user' },
+                // 定义路由
+                { path: '/user', component: user },
+                { path: '/login', component: login }
+            ]
+        })
+
+        const vm = new Vue({
+            el: "#app",
+            data: {},
+            router
+        })
+
+    </script>
+
+</body>
+
+</html>

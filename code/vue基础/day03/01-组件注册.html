@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="app">
+        <btn-count></btn-count>
+        <btn-count></btn-count>
+    </div>
+
+
+    <script src="./js/vue.js"></script>
+
+    <template id="btn">
+        <!-- 只能有一个div根元素 -->
+
+        <div>
+            <button @click="add">点击了{{count}}次</button>
+        </div>
+    </template>
+
+    <script>
+
+        Vue.component("btn-count", {
+            // data 必须是一个方法,用return返回值得方法来返回数据
+            data: function () {
+                return {
+                    count: 0
+                }
+            },
+            // 可以用模板字符串  `` 的方法
+            // 还可以用模板引擎类似方法  <script type="text/html" id="one"><script>
+            // 还可以用template方法  <template id="btn"></template> 推荐
+            template: "#btn",
+            methods: {
+                add: function () {
+                    this.count++
+                }
+            }
+        })
+
+        let vm = new Vue({
+            el: "#app",
+            data: {}
+        })
+
+    </script>
+
+</body>
+
+</html>

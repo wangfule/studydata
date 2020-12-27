@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        姓:<input type="text" v-model.lazy="a"><br />
+        名:<input type="text" v-model.lazy="b">
+
+        <div>{{fullname}}</div>
+
+    </div>
+
+    <script src="./js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                a: "wang",
+                b: "fule",
+                c: "wang fule"
+            },
+            // computed: {
+            //     fullname: function () {
+            //         return this.a + " " + this.b
+            //     }
+            // },
+            watch: {
+                a: function (val) {
+                    this.c = val + this.b
+                },
+                b: function (val) {
+                    this.c = this.a + val;
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

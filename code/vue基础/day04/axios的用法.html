@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="./js/axios.js"></script>
+    <script>
+
+        // axios的全局配置
+        // baseAPI的用法
+        axios.defaults.baseURL = 'http://127.0.0.1:3000'
+        // 超过时间
+        axios.defaults.timeout = 2500;
+        // 请求头
+        // axios.defaults.headers['mytoken'] = "bearar dasdwdasdwasdwadsawd"
+
+
+        // axios 拦截器 记得return
+        // 请求拦截器 发送请求前会调用,
+        axios.interceptors.request.use(function (config) {
+            // console.log(config);
+            config.headers.mytoken = "bearar dasdwdasdwasdwadsawd"
+            return config
+        })
+
+        // 响应拦截器  服务器响应回来数据前会调用
+        axios.interceptors.response.use(function (res) {
+            // console.log(res.data);
+            return res.data
+        })
+
+
+        // 带参数的get请求  delete请求和get请求与一样
+        axios.get('/ax', {
+            params: {
+                id: 7
+            }
+        })
+            .then(function (data) {
+                // 响应拦截器已经将数据处理了
+                console.log(data);
+
+            })
+
+        // 带参数的post请求 put请求和它一样
+        axios.post('/axp', {
+            uname: 'haha',
+            age: 18
+        }).then(function (data) {
+            console.log(data);
+        })
+    </script>
+
+</body>
+
+</html>

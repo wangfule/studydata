@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+
+
+        <itme-list>
+            <p>dada</p>
+            <p slot="header"> 啊啊啊</p>
+            <p slot='bbb'>dudu</p>
+        </itme-list>
+
+
+    </div>
+
+    <script src="./js/vue.js"></script>
+    <script>
+
+        Vue.component("itme-list", {
+            template: `
+            <div>
+                <div>
+                        <slot>nihao</slot>          
+                </div>
+
+                <div>
+                    <slot name='header'>hah</slot>         
+                </div>
+
+                <div>
+                        <slot name='bbb'>nihao</slot>          
+                </div>
+                            
+            </div>
+            `
+        })
+
+        new Vue({
+            el: '#app'
+        })
+
+    </script>
+
+</body>
+
+</html>

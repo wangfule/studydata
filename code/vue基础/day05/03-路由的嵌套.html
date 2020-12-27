@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <router-link to="/index">Index</router-link>
+        <router-link to="/login">Login</router-link>
+
+        <router-view></router-view>
+
+    </div>
+
+    <script src="./lib/vue_2.5.22.js"></script>
+    <script src="./lib/vue-router_3.0.2.js"></script>
+
+    <script>
+
+        // 定义组件
+        const Index = {
+            template: `<h1>Index</h1>`
+        }
+
+        const Login = {
+            template: `
+                <div>
+                    <h1>login</h1>
+                    <hr />
+                    <router-link to="/login/item1"> item1</router-link>
+                    <router-link to="/login/item2">item2</router-link>
+
+                    <router-view></router-view>
+                </div>
+            `
+        }
+
+        const item1 = {
+            template: `<h2>item1</h2>`
+        }
+        const item2 = {
+            template: `<h2>item2</h2>`
+        }
+
+        // 实例化一个路由
+
+        const router = new VueRouter({
+            routes: [
+                { path: '/', redirect: '/index' },
+                { path: '/index', component: Index },
+                {
+                    path: '/login', component: Login, children: [
+                        { path: '/login', redirect: '/login/item1' },
+                        { path: '/login/item1', component: item1 },
+                        { path: '/login/item2', component: item2 }
+                    ]
+                }
+            ]
+        })
+
+        const vm = new Vue({
+            el: '#app',
+            data: {},
+            router
+        })
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cs {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="text" v-focus>
+        <input type="text" v-focus>
+
+        <div id="cs" v-color="bgc"></div>
+    </div>
+
+    <script src="./js/vue.js"></script>
+    <script>
+
+        // 自定义属性
+        Vue.directed('fouce', {
+            inserted: function (el) {
+                el.focus();
+            }
+
+        })
+
+        // 带参数的自定义属性
+        Vue.directive('color', {
+            inserted: function (el, binding) {
+                // console.log(binding.value);
+                el.style.backgroundColor = binding.value
+            }
+        })
+
+        Vue.directive('focus', {
+            inserted: function (el) {
+                el.focus()
+            }
+        })
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                bgc: "red"
+            }
+        })
+    </script>
+
+</body>
+
+</html>

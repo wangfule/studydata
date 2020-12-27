@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div>{{msg}}</div>
+        <!-- v-once 数据只加载一次 -->
+        <div v-once>{{msg1}}</div>
+        <div v-html="msg1"></div>
+    </div>
+
+    <script src="./js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                msg: "hellow vue",
+                msg1: "<h1>dada</h1>"
+            }
+        })
+    </script>
+
+</body>
+
+</html>

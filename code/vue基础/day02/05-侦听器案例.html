@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="text" placeholder="请输入用户名" v-model.lazy="uname">
+        <span>{{tip}}</span>
+    </div>
+
+    <script src="./js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                tip: "",
+                uname: ""
+            },
+            methods: {
+                yzName: function (name) {
+                    let that = this;
+                    // console.log(this);
+                    setTimeout(function () {
+                        if (name == "admin") {
+                            that.tip = "用户名已被注册!"
+                        } else {
+                            that.tip = "用户名可用!"
+                        }
+                    }, 1000)
+                }
+            },
+            watch: {
+                uname: function (val) {
+                    this.tip = "正在验证..."
+                    console.log(val);
+                    this.yzName(val)
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

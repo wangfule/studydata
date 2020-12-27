@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div>{{msg}}</div>
+        <meau-item :arr="parr" @addnum="handle($event)"></meau-item>
+    </div>
+
+    <script src="./js/vue.js"></script>
+    <template id="tpl">
+        <div>
+            <ul>
+                <li :key="index" v-for="(item,index) in arr">{{item}}</li>
+            </ul>
+            <button @click="$emit('addnum',5)">变大</button>
+        </div>
+    </template>
+    <script>
+
+        Vue.component("meau-item", {
+            props: ['arr'],
+            template: '#tpl',
+        })
+
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                msg: 1,
+                parr: [1, 2, 3]
+            },
+            methods: {
+                handle: function (val) {
+                    console.log(val);
+                    this.msg += val
+                }
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

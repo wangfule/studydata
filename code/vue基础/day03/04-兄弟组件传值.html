@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <tom-com></tom-com>
+        <jack-com></jack-com>
+    </div>
+
+
+    <script src="./js/vue.js"></script>
+    <template id="tpl-tom">
+
+        <div>
+            <div>tom :{{num}}</div>
+            <button @click="handle">tom按钮</button>
+        </div>
+
+    </template>
+
+    <template id="tpl-jack">
+        <div>
+            <div>jack :{{num}}</div>
+            <button @click="handle">jack按钮</button>
+        </div>
+
+    </template>
+    <script>
+
+        // 定义中间组件
+        var hub = new Vue();
+
+        // 定义组件tom
+        Vue.component('tom-com', {
+            data: function () {
+                return {
+                    num: 0
+                }
+            },
+            template: "#tpl-tom",
+            methods: {
+                handle: function () {
+                    hub.$emit('jack-event', 1)
+                }
+            },
+            mounted: function () {
+                hub.$on('tom-event', (val) => {
+                    this.num += val;
+                })
+            }
+
+        })
+
+        // 定义组件jack
+        Vue.component('jack-com', {
+            data: function () {
+                return {
+                    num: 0
+                }
+            },
+            template: "#tpl-jack",
+            methods: {
+                handle: function () {
+                    hub.$emit("tom-event", 2)
+                }
+            },
+            mounted: function () {
+                hub.$on('jack-event', (val) => {
+                    this.num += val;
+                })
+            }
+        })
+
+
+        var vm = new Vue({
+            el: "#app",
+            data: {}
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div>{{msg}}</div>
+        <meau-item :title="fmsg" :farr="farr" fnum1="1" :fnum2="1"></meau-item>
+    </div>
+
+
+
+
+    <script src="./js/vue.js"></script>
+    <template id="tpl">
+        <!-- 只能有一个div根元素 -->
+        <div>
+            <div>{{cmsg}}</div>
+            <div>{{title}}</div>
+            <ul>
+                <li :key="index" v-for="(item,index) in farr">{{item}}</li>
+            </ul>
+            <div>{{typeof fnum1}}</div>
+            <div>{{typeof fnum2}}</div>
+        </div>
+    </template>
+    <script>
+
+        Vue.component('meau-item', {
+            // 这里的title是上面标签里动态属性名字
+            // 可以接受任何数据类型的值 但是要注意 number和bool类型的动态参数会和传递数据类型一样,而静态参数传递的就是字符串
+            props: ['title', 'farr', "fnum1", "fnum2"],
+            data: function () {
+                return {
+                    cmsg: "我是子组件的值"
+                }
+            },
+            template: "#tpl"
+        })
+
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                msg: "我是父组件",
+                fmsg: "wo shi ni baba",
+                farr: ['one', 'two', 'three'],
+            }
+        })
+
+    </script>
+</body>
+
+</html>
